@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import { locations } from "@/lib/locations";
 
 export default function Footer() {
   return (
@@ -65,8 +66,30 @@ export default function Footer() {
           </div>
         </div>
 
+        {/* ── All Service Areas ── */}
         <div
-          className="mt-10 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs"
+          className="mt-10 pt-8"
+          style={{ borderTop: "1px solid rgba(240,24,125,0.12)" }}
+        >
+          <h3 className="text-xs font-bold uppercase tracking-[0.2em] mb-5" style={{ color: "#f5c842" }}>
+            Escort Service Areas in Patna
+          </h3>
+          <div className="flex flex-wrap gap-x-3 gap-y-2">
+            {locations.map((loc) => (
+              <Link
+                key={loc.slug}
+                href={`/${loc.slug}`}
+                className="text-xs transition-colors hover:text-white"
+                style={{ color: "rgba(255,255,255,0.45)" }}
+              >
+                {loc.name}
+              </Link>
+            ))}
+          </div>
+        </div>
+
+        <div
+          className="mt-8 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs"
           style={{ borderTop: "1px solid rgba(240,24,125,0.12)", color: "rgba(255,255,255,0.3)" }}
         >
           <p>© {new Date().getFullYear()} Hot Sonia. All rights reserved.</p>
