@@ -1,8 +1,19 @@
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Escorts Prices In Patna | Starting ₹9,000',
-  description: 'Check our escort pricing in Patna. Premium call girls starting from ₹9,000/hour with various packages available.',
+  metadataBase: new URL('https://hotsonia.in'),
+  title: 'Escorts Prices In Patna | Starting ₹9,000 | Transparent Pricing',
+  description: 'Transparent escort pricing in Patna. College girls ₹9K, Models ₹12K, VIP ₹20K+. Incall & outcall available 24/7. No hidden charges.',
+  keywords: 'Escorts prices Patna, Call girls rates, Escort cost, Incall outcall prices, VIP pricing',
+  alternates: {
+    canonical: 'https://hotsonia.in/prices',
+  },
+  openGraph: {
+    type: 'website',
+    url: 'https://hotsonia.in/prices',
+    title: 'Escorts Prices In Patna | Starting ₹9,000',
+    description: 'Transparent pricing for verified escorts in Patna. All packages include incall & outcall.',
+  },
 };
 
 export default function Prices() {

@@ -1,5 +1,23 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  metadataBase: new URL('https://hotsonia.in'),
+  title: 'Escorts In Patna | ₹9K Call Girls 24/7 Booking | 100% Verified Models',
+  description: 'Premium Escorts In Patna ✓ Book verified call girls starting ₹9,000. Incall & outcall services 24/7 at hotels & residences. 50+ locations. 100% genuine, discreet & confidential.',
+  keywords: 'Escorts in Patna, Patna Escorts, Call Girls in Patna, VIP Escorts, College Girls, Models, Verified Escorts',
+  alternates: {
+    canonical: 'https://hotsonia.in',
+  },
+  openGraph: {
+    type: 'website',
+    url: 'https://hotsonia.in',
+    title: 'Escorts In Patna | ₹9K Call Girls 24/7 – Verified & Discreet',
+    description: 'Book premium verified escorts in Patna starting ₹9,000. Incall & outcall 24/7. 100% genuine models.',
+    siteName: 'Escorts In Patna',
+  },
+};
 
 export default function Home() {
   const models = [

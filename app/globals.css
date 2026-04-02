@@ -3,11 +3,13 @@
 @font-face {
   font-family: 'Playfair Display';
   src: url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900');
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'Poppins';
   src: url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800');
+  font-display: swap;
 }
 
 * {
@@ -18,6 +20,9 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 body {
@@ -26,11 +31,22 @@ body {
   color: #ccc;
   line-height: 1.7;
   overflow-x: hidden;
+  -webkit-tap-highlight-color: transparent;
 }
 
 a {
   text-decoration: none;
   color: inherit;
+  transition: all 0.3s ease;
+}
+
+a:focus-visible {
+  outline: 2px solid #ec4899;
+  outline-offset: 2px;
+}
+
+button {
+  -webkit-tap-highlight-color: transparent;
 }
 
 ul {
@@ -40,12 +56,50 @@ ul {
 img {
   max-width: 100%;
   display: block;
+  height: auto;
+}
+
+/* Optimize font loading */
+.font-playfair {
+  font-family: var(--font-playfair), 'Playfair Display', serif;
+}
+
+.font-poppins {
+  font-family: var(--font-poppins), 'Poppins', sans-serif;
 }
 
 .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
+}
+
+/* Enhanced focus states for accessibility */
+:focus {
+  outline-offset: 2px;
+}
+
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* Animations */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  * {
+    scroll-behavior: smooth;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
 
 /* Reveal Animation */
@@ -77,6 +131,7 @@ img {
 /* Custom scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
+  height: 8px;
 }
 
 ::-webkit-scrollbar-track {
@@ -84,10 +139,117 @@ img {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #ff4081;
+  background: #ec4899;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
   background: #c44dff;
 }
+
+/* Firefox scrollbar */
+* {
+  scrollbar-color: #ec4899 #0d0d0d;
+  scrollbar-width: thin;
+}
+
+/* Better selection color for accessibility */
+::selection {
+  background-color: #ec4899;
+  color: white;
+}
+
+::-moz-selection {
+  background-color: #ec4899;
+  color: white;
+}
+
+/* Input focus states */
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: #ec4899 !important;
+  box-shadow: 0 0 0 3px rgba(236, 72, 153, 0.1);
+}
+
+/* Button accessibility improvements */
+button:focus-visible,
+a:focus-visible {
+  outline: 2px solid #ec4899;
+  outline-offset: 2px;
+}
+
+/* Improved hover states for touch devices */
+@media (hover: hover) {
+  a:hover,
+  button:hover {
+    text-decoration: none;
+  }
+}
+
+/* Loading state */
+.animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Print styles */
+@media print {
+  body {
+    background: white;
+    color: black;
+  }
+  
+  a {
+    color: #0066cc;
+  }
+}
+
+/* Mobile optimization */
+@media (max-width: 768px) {
+  body {
+    font-size: 16px;
+  }
+  
+  h1 {
+    font-size: 28px;
+  }
+  
+  h2 {
+    font-size: 24px;
+  }
+}
+
+/* Loading animation */
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+.shimmer {
+  animation: shimmer 2s infinite;
+  background: linear-gradient(to right, #1f1f1f 0%, #3f3f3f 50%, #1f1f1f 100%);
+  background-size: 1000px 100%;
+}
+
+/* Gradient animation */
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.gradient-animate {
+  background-size: 200% 200%;
+  animation: gradient 3s ease infinite;
+}
+

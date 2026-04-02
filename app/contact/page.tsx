@@ -1,10 +1,6 @@
 'use client';
 
-import { Metadata } from 'next';
 import { useState } from 'react';
-
-// Note: Metadata export works in layout/page components, not client components
-// This will be used as a regular component with manual head management
 
 export default function Contact() {
   const [formData, setFormData] = useState({

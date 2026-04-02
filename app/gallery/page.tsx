@@ -2,8 +2,19 @@ import Image from 'next/image';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Escorts Gallery In Patna | VIP Call Girls Photos',
-  description: 'Browse our gallery of verified high-profile escorts in Patna. 100% genuine photos of premium call girls available 24/7.',
+  metadataBase: new URL('https://hotsonia.in'),
+  title: 'Escorts Gallery In Patna | VIP Call Girls Photos | 100% Genuine Models',
+  description: 'Browse gallery of 100% verified premium escorts in Patna. Genuine photos of call girls available for incall & outcall 24/7. Starting ₹9,000/hour.',
+  keywords: 'Escorts gallery Patna, Call girls photos, VIP models, Verified escorts, Premium companions',
+  alternates: {
+    canonical: 'https://hotsonia.in/gallery',
+  },
+  openGraph: {
+    type: 'website',
+    url: 'https://hotsonia.in/gallery',
+    title: 'Escorts Gallery In Patna | 100+ VIP Call Girls',
+    description: '100% verified escorts in Patna. Browse gallery & book premium call girls 24/7.',
+  },
 };
 
 export default function Gallery() {
