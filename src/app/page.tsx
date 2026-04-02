@@ -86,6 +86,30 @@ const faqs = [
     q: "Do Patna Escorts provide outcall services across all areas?",
     a: "Yes, our out-call Patna Escorts visit your hotel or residence across all major areas — Boring Road, Kankarbagh, Bailey Road, Rajendra Nagar, and all Patna hotels. We also cover nearby cities in Bihar.",
   },
+  {
+    q: "What types of companions are available at Hot Sonia?",
+    a: "Hot Sonia offers a diverse roster — college girls, models, housewives, VIP companions, and independent escorts in Patna. All companions have verified real photos and professional profiles so you know exactly who you are booking.",
+  },
+  {
+    q: "Can I see real photos before booking a call girl in Patna?",
+    a: "Yes. Every companion on Hot Sonia's gallery has 100% real, unedited photos. We never use fake or stock images. Browse our full gallery and choose your ideal call girl in Patna with complete confidence.",
+  },
+  {
+    q: "Is it safe to contact Hot Sonia for escort service in Patna?",
+    a: "Completely safe. Your name, number, and booking details are never shared or stored after the session. Hot Sonia uses encrypted communication and has a strict no-third-party-disclosure policy for all escort service in Patna bookings.",
+  },
+  {
+    q: "Do you offer same-day booking for Patna Escorts?",
+    a: "Yes! Same-day and even same-hour bookings are available for most of our escorts in Patna. Simply WhatsApp or call us, confirm your choice from the gallery, and your companion will be ready within the hour.",
+  },
+  {
+    q: "What is the difference between in-call and out-call escorts in Patna?",
+    a: "In-call means you visit our discreet, fully-furnished private venue in Patna. Out-call means your companion visits your hotel room or residence anywhere in Patna. Both services are available 24/7 with the same level of privacy and luxury.",
+  },
+  {
+    q: "Do Hot Sonia escorts serve tourists and hotel guests in Patna?",
+    a: "Absolutely. We regularly serve guests staying at hotels across Patna — from budget properties to 5-star hotels near Gandhi Maidan, Patna Junction, Fraser Road, and Boring Road. Our discreet out-call service ensures no attention is drawn at your property.",
+  },
 ];
 
 const faqSchema = {
@@ -483,48 +507,107 @@ export default function HomePage() {
 
       {/* FAQ — AEO */}
       <section
-        className="py-16"
+        className="py-20 relative overflow-hidden"
         style={{ background: "linear-gradient(180deg, #0a0208 0%, #100009 100%)" }}
         aria-label="FAQ — Escorts in Patna"
       >
-        <div className="max-w-4xl mx-auto px-4 sm:px-6">
-          <div className="text-center mb-10">
-            <p className="text-xs uppercase tracking-[0.25em] font-bold mb-2" style={{ color: "#f5c842" }}>
-              \u2726 Common Questions \u2726
-            </p>
+        {/* Decorative glow blobs */}
+        <div
+          className="absolute top-0 left-1/4 w-96 h-96 rounded-full pointer-events-none"
+          style={{ background: "radial-gradient(circle, rgba(240,24,125,0.08) 0%, transparent 70%)", filter: "blur(40px)" }}
+        />
+        <div
+          className="absolute bottom-0 right-1/4 w-96 h-96 rounded-full pointer-events-none"
+          style={{ background: "radial-gradient(circle, rgba(245,112,61,0.07) 0%, transparent 70%)", filter: "blur(40px)" }}
+        />
+
+        <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6">
+          {/* Header */}
+          <div className="text-center mb-14">
+            <span
+              className="inline-block text-xs font-bold uppercase tracking-[0.3em] px-5 py-2 rounded-full mb-4"
+              style={{ background: "rgba(240,24,125,0.12)", color: "#f0187d", border: "1px solid rgba(240,24,125,0.25)" }}
+            >
+              ✦ People Also Ask ✦
+            </span>
             <h2
-              className="text-3xl sm:text-4xl font-bold"
+              className="text-3xl sm:text-5xl font-bold"
               style={{ fontFamily: "var(--font-playfair)" }}
             >
-              <span className="gradient-text">FAQs</span>
-              <span className="text-white"> — Patna Escorts Service</span>
+              <span className="gradient-text">Frequently Asked</span>
+              <br />
+              <span className="text-white">Questions</span>
             </h2>
-            <p className="mt-3 text-sm" style={{ color: "rgba(255,255,255,0.45)" }}>
-              Everything you need to know about Escorts in Patna
+            <p className="mt-4 text-sm max-w-xl mx-auto" style={{ color: "rgba(255,255,255,0.45)" }}>
+              Everything you need to know about Escorts in Patna & Patna Escorts Service
             </p>
           </div>
-          <div className="space-y-3">
+
+          {/* Two-column accordion grid */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
             {faqs.map((faq, i) => (
               <details
                 key={i}
-                className="card-glass rounded-2xl"
-                style={{ cursor: "pointer" }}
+                className="group rounded-2xl overflow-hidden"
+                style={{
+                  background: "linear-gradient(135deg, rgba(20,3,15,0.9) 0%, rgba(30,5,20,0.9) 100%)",
+                  border: "1px solid rgba(240,24,125,0.15)",
+                  backdropFilter: "blur(12px)",
+                }}
               >
                 <summary
-                  className="flex justify-between items-center p-5 font-semibold text-white list-none select-none"
-                  style={{ fontFamily: "var(--font-playfair)" }}
+                  className="flex items-start gap-4 p-5 cursor-pointer list-none select-none"
+                  style={{ outline: "none" }}
                 >
-                  <span>{faq.q}</span>
-                  <span className="text-xl gradient-text ml-4 flex-shrink-0" aria-hidden="true">+</span>
+                  {/* Number badge */}
+                  <span
+                    className="flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center text-xs font-bold mt-0.5"
+                    style={{
+                      background: "linear-gradient(135deg,#f5703d,#f0187d)",
+                      color: "#fff",
+                      minWidth: "2rem",
+                    }}
+                  >
+                    {String(i + 1).padStart(2, "0")}
+                  </span>
+                  <span
+                    className="flex-1 font-semibold text-white text-sm sm:text-base leading-snug"
+                    style={{ fontFamily: "var(--font-playfair)" }}
+                  >
+                    {faq.q}
+                  </span>
+                  {/* Plus / minus icon */}
+                  <span
+                    className="flex-shrink-0 w-7 h-7 rounded-full flex items-center justify-center text-lg font-light transition-transform duration-300 group-open:rotate-45"
+                    style={{ background: "rgba(240,24,125,0.15)", color: "#f0187d" }}
+                  >
+                    +
+                  </span>
                 </summary>
-                <p
-                  className="px-5 pb-5 text-sm leading-relaxed"
-                  style={{ color: "rgba(255,255,255,0.65)" }}
-                >
-                  {faq.a}
-                </p>
+                <div className="px-5 pb-5 pl-[4.25rem]">
+                  <div
+                    className="w-10 h-px mb-3"
+                    style={{ background: "linear-gradient(90deg,#f0187d,transparent)" }}
+                  />
+                  <p className="text-sm leading-relaxed" style={{ color: "rgba(255,255,255,0.65)" }}>
+                    {faq.a}
+                  </p>
+                </div>
               </details>
             ))}
+          </div>
+
+          {/* Bottom CTA */}
+          <div className="text-center mt-12">
+            <p className="text-sm mb-4" style={{ color: "rgba(255,255,255,0.45)" }}>
+              Still have questions? We&apos;re here 24/7.
+            </p>
+            <Link
+              href="/contact"
+              className="btn-gradient glow-pink text-white font-bold px-10 py-3.5 rounded-full text-sm inline-block"
+            >
+              Ask Us Anything ✦
+            </Link>
           </div>
         </div>
       </section>
