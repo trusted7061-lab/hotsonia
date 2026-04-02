@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Crawl-delay: none (we want maximum indexing speed)
+Crawl-delay: 0
+
+# Sitemap
+Sitemap: https://www.hotsonia.com/sitemap.xml

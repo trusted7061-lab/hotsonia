@@ -2,51 +2,68 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Services | Hot Sonia — Escorts in Patna",
-  description: "Premium escort services in Patna — in-call, out-call, overnight, travel companion, and more.",
+  title: "Patna Escorts Service | Call Girls Services & Rates | Hot Sonia Patna",
+  description:
+    "Hot Sonia offers the best Patna Escorts Service. In-call from Rs.3,000, out-call from Rs.4,000, overnight from Rs.12,000. Premium Call Girls in Patna for every desire. Available 24/7.",
+  alternates: { canonical: "https://www.hotsonia.com/services" },
+  openGraph: {
+    title: "Patna Escorts Service | Rates & Packages | Hot Sonia",
+    description:
+      "Premium Patna Escorts Service packages. In-call, out-call, overnight & travel companion. Book call girls in Patna today.",
+    images: [{ url: "https://www.hotsonia.com/images/banner.webp", alt: "Patna Escorts Service — Hot Sonia" }],
+  },
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home — Escorts in Patna", item: "https://www.hotsonia.com" },
+    { "@type": "ListItem", position: 2, name: "Patna Escorts Service", item: "https://www.hotsonia.com/services" },
+  ],
 };
 
 const services = [
   {
-    icon: "🌹",
-    title: "In-Call Services",
-    price: "Starting ₹3,000",
-    desc: "Visit our private, luxurious in-call venues available 24/7 across Patna. Clean, hygienic, and exceptionally comfortable.",
+    icon: "\ud83c\udf39",
+    title: "In-Call Escort Service Patna",
+    price: "Starting Rs.3,000",
+    desc: "Visit our private, luxurious in-call venues available 24/7 across Patna. Clean, hygienic, and exceptionally comfortable. Our in-call escorts in Patna are always ready.",
     features: ["Private venue", "Fully hygienic", "Discreet location", "Comfortable setup"],
   },
   {
-    icon: "🚗",
-    title: "Out-Call Services",
-    price: "Starting ₹4,000",
-    desc: "We come to your hotel or home at your convenience. Punctual, well-dressed, and completely discreet.",
+    icon: "\ud83d\ude97",
+    title: "Out-Call Escorts in Patna",
+    price: "Starting Rs.4,000",
+    desc: "Our call girls in Patna come to your hotel or home at your convenience. Punctual, well-dressed, and completely discreet. Best out-call Patna Escorts Service.",
     features: ["Hotel visits", "Home visits", "Punctual arrival", "Discreet exit"],
   },
   {
-    icon: "🌙",
-    title: "Overnight Package",
-    price: "Starting ₹12,000",
-    desc: "An extended night of warmth and companionship. Perfect for those who want more time to connect.",
+    icon: "\ud83c\udf19",
+    title: "Overnight Patna Escorts",
+    price: "Starting Rs.12,000",
+    desc: "An extended night of warmth and companionship with your chosen escort in Patna. Perfect for those who want more time to connect.",
     features: ["Full night stay", "Extended companionship", "Morning available", "Flexible timing"],
   },
   {
-    icon: "✈️",
-    title: "Travel Companion",
-    price: "Starting ₹20,000 / day",
-    desc: "Take a gorgeous, cultured companion on your next trip — domestic or international.",
+    icon: "\u2708\ufe0f",
+    title: "Travel Companion Patna",
+    price: "Starting Rs.20,000 / day",
+    desc: "Take a gorgeous, cultured Patna escort on your next trip — domestic or international. Our call girls in Patna travel anywhere.",
     features: ["Domestic trips", "International trips", "Fully discreet", "Weekends available"],
   },
   {
-    icon: "💎",
-    title: "Elite Companion",
-    price: "Starting ₹6,000",
-    desc: "Our top-tier companions for corporate dinners, VIP events, and exclusive occasions.",
+    icon: "\ud83d\udc8e",
+    title: "Elite VIP Escort Patna",
+    price: "Starting Rs.6,000",
+    desc: "Our top-tier call girls in Patna for corporate dinners, VIP events, and exclusive occasions.",
     features: ["Event escort", "VIP experience", "Well educated", "Elegantly dressed"],
   },
   {
-    icon: "🎉",
-    title: "Party Companion",
-    price: "Starting ₹5,000",
-    desc: "A lively, fun companion for parties, social gatherings, and private celebrations.",
+    icon: "\ud83c\udf89",
+    title: "Party Companion Patna",
+    price: "Starting Rs.5,000",
+    desc: "A lively, fun Patna escort for parties, social gatherings, and private celebrations.",
     features: ["Private parties", "Social events", "Fun personality", "Available 24/7"],
   },
 ];
@@ -54,6 +71,8 @@ const services = [
 export default function ServicesPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+
       {/* Hero */}
       <section
         className="pt-32 pb-14 text-center"
@@ -61,16 +80,21 @@ export default function ServicesPage() {
       >
         <div className="max-w-4xl mx-auto px-4">
           <p className="text-xs uppercase tracking-[0.28em] font-bold mb-2" style={{ color: "#f5c842" }}>
-            ✦ Premium Offerings ✦
+            \u2726 Premium Patna Escorts Packages \u2726
           </p>
           <h1
             className="text-4xl sm:text-5xl font-bold mb-4"
             style={{ fontFamily: "var(--font-playfair)" }}
           >
-            <span className="gradient-text">Our Services</span>
+            <span className="gradient-text">Patna Escorts Service</span>
           </h1>
-          <p className="text-sm" style={{ color: "rgba(255,255,255,0.52)" }}>
-            From casual dates to overnight stays — we have the perfect service for every desire.
+          <nav aria-label="Breadcrumb" className="mt-3 text-xs" style={{ color: "rgba(255,255,255,0.4)" }}>
+            <Link href="/" style={{ color: "rgba(255,255,255,0.5)" }}>Home</Link>
+            <span className="mx-2">&#x203A;</span>
+            <span style={{ color: "#f0187d" }}>Patna Escorts Service</span>
+          </nav>
+          <p className="text-sm mt-4" style={{ color: "rgba(255,255,255,0.52)" }}>
+            From casual dates to overnight stays — the best Patna Escorts Service for every desire.
           </p>
         </div>
       </section>
@@ -86,12 +110,9 @@ export default function ServicesPage() {
               >
                 <div className="text-5xl mb-5">{s.icon}</div>
                 <div className="flex items-start justify-between gap-3 mb-3">
-                  <h3
-                    className="text-white font-bold text-xl"
-                    style={{ fontFamily: "var(--font-playfair)" }}
-                  >
+                  <h2 className="text-white font-bold text-xl" style={{ fontFamily: "var(--font-playfair)" }}>
                     {s.title}
-                  </h3>
+                  </h2>
                   <span
                     className="text-xs font-bold px-3 py-1.5 rounded-full whitespace-nowrap flex-shrink-0"
                     style={{ background: "rgba(240,24,125,0.18)", color: "#f0187d" }}
@@ -110,17 +131,13 @@ export default function ServicesPage() {
                     </li>
                   ))}
                 </ul>
-                <Link
-                  href="/contact"
-                  className="block text-center btn-gradient text-white font-semibold py-3 rounded-xl text-sm"
-                >
+                <Link href="/contact" className="block text-center btn-gradient text-white font-semibold py-3 rounded-xl text-sm">
                   Book This Service
                 </Link>
               </div>
             ))}
           </div>
 
-          {/* Custom */}
           <div
             className="mt-14 rounded-3xl p-10 text-center"
             style={{
@@ -128,15 +145,12 @@ export default function ServicesPage() {
               border: "1px solid rgba(240,24,125,0.2)",
             }}
           >
-            <div className="text-5xl mb-4">✨</div>
-            <h3
-              className="text-white text-2xl font-bold mb-2"
-              style={{ fontFamily: "var(--font-playfair)" }}
-            >
-              Custom Packages Available
-            </h3>
+            <div className="text-5xl mb-4">\u2728</div>
+            <h2 className="text-white text-2xl font-bold mb-2" style={{ fontFamily: "var(--font-playfair)" }}>
+              Custom Patna Escorts Packages Available
+            </h2>
             <p className="text-sm mb-7 max-w-lg mx-auto" style={{ color: "rgba(255,255,255,0.52)" }}>
-              Have something specific in mind? We create fully tailored experiences designed just for you.
+              Have something specific in mind? We create fully tailored Patna Escorts Service experiences designed just for you.
             </p>
             <Link href="/contact" className="btn-gradient glow-pink text-white font-bold px-10 py-4 rounded-full text-sm">
               Enquire Now
