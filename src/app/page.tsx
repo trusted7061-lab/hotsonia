@@ -438,70 +438,293 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* SEO CONTENT SECTION */}
-      <section className="py-16" style={{ background: "#0a0208" }}>
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* SEO CONTENT SECTION — 1000+ words */}
+      <section className="py-20" style={{ background: "#0a0208" }}>
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-14">
+
+          {/* Block 1 — intro */}
           <div className="card-glass rounded-3xl p-8 sm:p-12">
             <h2
-              className="text-2xl sm:text-3xl font-bold mb-6"
+              className="text-2xl sm:text-3xl font-bold mb-5"
               style={{ fontFamily: "var(--font-playfair)" }}
             >
-              <span className="gradient-text">Premium Escorts in Patna</span>
-              <span className="text-white"> — About Our Patna Escorts Service</span>
+              <span className="gradient-text">Escorts in Patna</span>
+              <span className="text-white"> — Hot Sonia, Bihar&apos;s #1 Escort Agency</span>
             </h2>
-            <div
-              className="grid grid-cols-1 sm:grid-cols-2 gap-8 text-sm leading-loose"
-              style={{ color: "rgba(255,255,255,0.65)" }}
+            <div className="space-y-4 text-sm leading-loose" style={{ color: "rgba(255,255,255,0.7)" }}>
+              <p>
+                Welcome to <strong className="text-white">Hot Sonia</strong> — the most trusted and premium{" "}
+                <strong style={{ color: "#f0187d" }}>escort service in Patna</strong>, Bihar. For over 5 years, we have
+                been the preferred choice of thousands of elite clients who demand verified companions, absolute
+                discretion, and guaranteed satisfaction. Whether you are looking for{" "}
+                <strong style={{ color: "#f0187d" }}>call girls in Patna</strong> for a relaxing evening,
+                a corporate event companion, or an overnight stay, Hot Sonia delivers an unmatched experience
+                every single time.
+              </p>
+              <p>
+                Our <strong style={{ color: "#f0187d" }}>Patna Escorts Service</strong> is built on three
+                pillars — beauty, discretion, and reliability. Every companion in our roster has been
+                personally interviewed, photographed with real photos, and professionally trained to ensure
+                your complete comfort and satisfaction. We have zero tolerance for fake profiles, bait-and-switch
+                tactics, or hidden charges — what you see in our gallery is exactly what you get.
+              </p>
+              <p>
+                Patna is Bihar&apos;s capital and a growing metropolitan city. As more business travellers,
+                corporate executives, and tourists visit the city, the demand for high-quality{" "}
+                <strong style={{ color: "#f0187d" }}>escorts in Patna</strong> has never been higher.
+                Hot Sonia was created to meet exactly this demand — offering a five-star level experience
+                that was previously only available in cities like Mumbai, Delhi, and Bangalore. Today, our
+                <strong style={{ color: "#f0187d" }}> Patna Escorts</strong> are considered the gold standard
+                in Bihar for companion services.
+              </p>
+            </div>
+          </div>
+
+          {/* Stats strip */}
+          <div
+            className="grid grid-cols-2 sm:grid-cols-4 gap-4 rounded-2xl p-6"
+            style={{ background: "linear-gradient(135deg,rgba(240,24,125,0.12),rgba(245,112,61,0.08))", border: "1px solid rgba(240,24,125,0.2)" }}
+          >
+            {[
+              { v: "500+", l: "Satisfied Clients" },
+              { v: "12+", l: "Verified Companions" },
+              { v: "5+", l: "Years of Service" },
+              { v: "24/7", l: "Available in Patna" },
+            ].map((s) => (
+              <div key={s.l} className="text-center py-2">
+                <div className="text-3xl font-bold gradient-text" style={{ fontFamily: "var(--font-playfair)" }}>{s.v}</div>
+                <div className="text-xs mt-1 uppercase tracking-widest" style={{ color: "rgba(255,255,255,0.45)" }}>{s.l}</div>
+              </div>
+            ))}
+          </div>
+
+          {/* Block 2 — call girls types */}
+          <div className="card-glass rounded-3xl p-8 sm:p-12">
+            <h2
+              className="text-2xl sm:text-3xl font-bold mb-5"
+              style={{ fontFamily: "var(--font-playfair)" }}
             >
+              <span className="gradient-text">Types of Call Girls in Patna</span>
+              <span className="text-white"> We Offer</span>
+            </h2>
+            <p className="text-sm leading-loose mb-6" style={{ color: "rgba(255,255,255,0.7)" }}>
+              At Hot Sonia, we understand that every client has a different taste and preference. That is why
+              our roster of <strong style={{ color: "#f0187d" }}>call girls in Patna</strong> is deliberately
+              diverse — covering a wide range of looks, personalities, and backgrounds. You are always
+              guaranteed to find your ideal companion.
+            </p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 text-sm leading-loose" style={{ color: "rgba(255,255,255,0.7)" }}>
               <div>
+                <h3 className="text-white font-bold mb-2" style={{ fontFamily: "var(--font-playfair)" }}>
+                  🎓 College Call Girls Patna
+                </h3>
                 <p>
-                  <strong style={{ color: "#fff" }}>Hot Sonia</strong> is Bihar&apos;s #1
-                  destination for <strong style={{ color: "#f0187d" }}>escorts in Patna</strong>.
-                  For over 5 years, we have been offering the most luxurious and discreet{" "}
-                  <strong style={{ color: "#f0187d" }}>Patna Escorts Service</strong> to elite
-                  clients who demand nothing but the best. Every companion is personally
-                  verified, professionally trained, and selected for both beauty and intelligence.
-                  Our <strong style={{ color: "#f0187d" }}>Patna Escorts</strong> are available
-                  for hotel visits, home calls, events, and overnight stays across all areas of Patna.
+                  Young, fresh, and full of energy — our college{" "}
+                  <strong style={{ color: "#f0187d" }}>call girls in Patna</strong> are among our most
+                  requested companions. They bring youthful charm, genuine warmth, and a playful personality
+                  to every encounter. All are 18+ and verified.
                 </p>
               </div>
               <div>
+                <h3 className="text-white font-bold mb-2" style={{ fontFamily: "var(--font-playfair)" }}>
+                  💼 Housewife Escorts Patna
+                </h3>
                 <p>
-                  Our <strong style={{ color: "#f0187d" }}>call girls in Patna</strong> are
-                  available for in-call, out-call, overnight stays, and travel companionship.
-                  As the most trusted <strong style={{ color: "#f0187d" }}>Patna Escorts</strong>{" "}
-                  agency, we guarantee absolute confidentiality, on-time service, and 100% real
-                  photos — no fake profiles, no hidden charges. Whether you&apos;re searching for{" "}
-                  <strong style={{ color: "#f0187d" }}>escorts in Patna</strong> for a short date
-                  or an extended stay, Hot Sonia delivers pure, unforgettable pleasure every time.
+                  For clients who prefer maturity, grace, and sensual experience, our housewife{" "}
+                  <strong style={{ color: "#f0187d" }}>escorts in Patna</strong> are ideal. Sophisticated,
+                  discreet, and deeply attentive, they know exactly how to make a man feel special and
+                  completely at ease.
+                </p>
+              </div>
+              <div>
+                <h3 className="text-white font-bold mb-2" style={{ fontFamily: "var(--font-playfair)" }}>
+                  👑 VIP & Model Escorts Patna
+                </h3>
+                <p>
+                  Tall, stunning, and magazine-worthy — our model-class{" "}
+                  <strong style={{ color: "#f0187d" }}>Patna Escorts</strong> are perfect for high-profile
+                  events, corporate dinners, and clients who want arm candy that turns heads. They are
+                  equally comfortable at a five-star dinner table or behind closed doors.
+                </p>
+              </div>
+              <div>
+                <h3 className="text-white font-bold mb-2" style={{ fontFamily: "var(--font-playfair)" }}>
+                  🌟 Independent Escorts Patna
+                </h3>
+                <p>
+                  Our independent <strong style={{ color: "#f0187d" }}>escorts in Patna</strong> work
+                  exclusively through Hot Sonia, ensuring quality control and genuine photos. They offer
+                  a more personal, connection-focused experience — ideal for clients seeking meaningful
+                  companionship alongside physical intimacy.
                 </p>
               </div>
             </div>
-            <div className="mt-8 flex flex-wrap gap-3">
+          </div>
+
+          {/* Block 3 — services explained */}
+          <div className="card-glass rounded-3xl p-8 sm:p-12">
+            <h2
+              className="text-2xl sm:text-3xl font-bold mb-5"
+              style={{ fontFamily: "var(--font-playfair)" }}
+            >
+              <span className="gradient-text">Patna Escorts Service</span>
+              <span className="text-white"> — Packages Explained</span>
+            </h2>
+            <div className="space-y-6 text-sm leading-loose" style={{ color: "rgba(255,255,255,0.7)" }}>
+              <div>
+                <h3 className="text-white font-bold mb-1" style={{ fontFamily: "var(--font-playfair)" }}>
+                  🌹 In-Call Escort Service Patna
+                </h3>
+                <p>
+                  In-call is the most private option in our{" "}
+                  <strong style={{ color: "#f0187d" }}>Patna Escorts Service</strong>. You visit one
+                  of our discreetly located, fully-furnished, luxurious private venues across Patna.
+                  The venue is clean, air-conditioned, professionally maintained, and completely
+                  confidential. In-call bookings start from just Rs.3,000 and can be reserved for
+                  one hour, multiple hours, or an entire night.
+                </p>
+              </div>
+              <div>
+                <h3 className="text-white font-bold mb-1" style={{ fontFamily: "var(--font-playfair)" }}>
+                  🚗 Out-Call Escort Service Patna
+                </h3>
+                <p>
+                  Our out-call <strong style={{ color: "#f0187d" }}>escorts in Patna</strong> come
+                  directly to your hotel room, guest house, or private residence anywhere in Patna.
+                  We serve all major hotels — from budget stays to five-star properties near Fraser Road,
+                  Boring Road, Bailey Road, Gandhi Maidan, and Patna Junction. Out-call service is
+                  available 24/7 and your companion arrives with complete discretion — no drama,
+                  no attention, no compromise.
+                </p>
+              </div>
+              <div>
+                <h3 className="text-white font-bold mb-1" style={{ fontFamily: "var(--font-playfair)" }}>
+                  🌙 Overnight Patna Escorts Package
+                </h3>
+                <p>
+                  Our overnight package is our most popular premium offering. Spend an entire night with
+                  a beautiful, verified <strong style={{ color: "#f0187d" }}>call girl in Patna</strong> —
+                  dinner, conversation, intimacy, and morning companionship. The overnight experience is
+                  the closest thing to having a genuine relationship for 12 hours. Available for
+                  in-call and out-call, starting Rs.12,000.
+                </p>
+              </div>
+              <div>
+                <h3 className="text-white font-bold mb-1" style={{ fontFamily: "var(--font-playfair)" }}>
+                  ✈️ Travel Companion Patna Escorts
+                </h3>
+                <p>
+                  Need a beautiful companion for a business trip, out-of-city travel, or a leisure
+                  holiday? Our travel companion{" "}
+                  <strong style={{ color: "#f0187d" }}>Patna Escorts Service</strong> allows you to
+                  take one of our verified companions anywhere in India. They are well-spoken,
+                  presentable, and experienced at blending into high-society environments — perfect
+                  for corporate retreats, weddings, or private vacations.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Block 4 — area coverage */}
+          <div className="card-glass rounded-3xl p-8 sm:p-12">
+            <h2
+              className="text-2xl sm:text-3xl font-bold mb-5"
+              style={{ fontFamily: "var(--font-playfair)" }}
+            >
+              <span className="gradient-text">Escorts Available Across</span>
+              <span className="text-white"> All Areas of Patna</span>
+            </h2>
+            <p className="text-sm leading-loose mb-6" style={{ color: "rgba(255,255,255,0.7)" }}>
+              Hot Sonia&apos;s <strong style={{ color: "#f0187d" }}>Patna Escorts Service</strong> covers
+              every corner of Patna city and its surrounding localities. Whether you are in the heart of
+              the city or a quieter suburb, our{" "}
+              <strong style={{ color: "#f0187d" }}>call girls in Patna</strong> reach you promptly and
+              discreetly. Below are the key areas we serve:
+            </p>
+            <div className="flex flex-wrap gap-2 mb-6">
               {[
-                "Escorts in Patna",
-                "Call Girls in Patna",
-                "Patna Escorts Service",
-                "Patna Escorts",
-                "Escort Agency Patna",
-                "VIP Call Girls Patna",
-                "24/7 Patna Escorts",
-                "Outcall Escorts Patna",
+                "Boring Road","Kankarbagh","Bailey Road","Fraser Road","Rajendra Nagar",
+                "Gandhi Maidan","Patna Junction","Exhibition Road","Dakbangla Chauraha",
+                "Patliputra Colony","Jagdev Path","Raja Bazar","Gola Road","Mithapur",
+                "Danapur","Bhuthnath","Jamal Road","Bariya Bus Stand","Patliputra Station",
+              ].map((area) => (
+                <Link
+                  key={area}
+                  href={`/${area.toLowerCase().replace(/\s+/g, "-")}`}
+                  className="text-xs px-3 py-1.5 rounded-full font-medium transition-colors hover:bg-pink-500/20"
+                  style={{ background: "rgba(240,24,125,0.1)", border: "1px solid rgba(240,24,125,0.22)", color: "rgba(255,255,255,0.75)" }}
+                >
+                  {area}
+                </Link>
+              ))}
+            </div>
+            <p className="text-sm leading-loose" style={{ color: "rgba(255,255,255,0.7)" }}>
+              Each area-specific page on our website provides local information, dedicated companions
+              serving that locality, and easy one-click booking. If you don&apos;t see your area listed,
+              contact us — we almost certainly serve it. Our{" "}
+              <strong style={{ color: "#f0187d" }}>escorts in Patna</strong> have covered every
+              mohalla, colony, and hotel zone in the city.
+            </p>
+          </div>
+
+          {/* Block 5 — why hot sonia + trust */}
+          <div className="card-glass rounded-3xl p-8 sm:p-12">
+            <h2
+              className="text-2xl sm:text-3xl font-bold mb-5"
+              style={{ fontFamily: "var(--font-playfair)" }}
+            >
+              <span className="gradient-text">Why Hot Sonia is the Best</span>
+              <span className="text-white"> Escort Agency in Patna</span>
+            </h2>
+            <div className="space-y-4 text-sm leading-loose" style={{ color: "rgba(255,255,255,0.7)" }}>
+              <p>
+                In a city full of fake listings and misleading advertisements, Hot Sonia stands apart
+                for one simple reason — <strong className="text-white">we keep our promises</strong>.
+                When you book an <strong style={{ color: "#f0187d" }}>escort in Patna</strong> with us,
+                you receive exactly what you see in our gallery. No bait-and-switch. No poor-quality
+                substitutes. No hidden fees added after the fact.
+              </p>
+              <p>
+                Our reputation has been built on five years of word-of-mouth referrals. Over{" "}
+                <strong className="text-white">70% of our bookings</strong> come from repeat clients
+                and personal recommendations — a testament to how seriously we take client satisfaction
+                in our <strong style={{ color: "#f0187d" }}>Patna Escorts Service</strong>.
+              </p>
+              <p>
+                We use encrypted communication channels for all bookings. Client names, contact numbers,
+                and session details are never stored beyond 24 hours. Our{" "}
+                <strong style={{ color: "#f0187d" }}>call girls in Patna</strong> are trained in
+                professional confidentiality — they do not share client information under any
+                circumstances. This is why senior executives, politicians, NRIs, and business owners
+                trust Hot Sonia as their go-to <strong style={{ color: "#f0187d" }}>Patna Escorts</strong>{" "}
+                agency.
+              </p>
+              <p>
+                Our venue facilities are world-class — soft lighting, premium bedding, private bathrooms,
+                24/7 room service coordination, and a fully discreet entry-exit system. When it comes to
+                in-call <strong style={{ color: "#f0187d" }}>escort service in Patna</strong>, no agency
+                comes close to the Hot Sonia experience.
+              </p>
+            </div>
+
+            {/* Keyword tag cloud */}
+            <div className="mt-8 flex flex-wrap gap-2">
+              {[
+                "Escorts in Patna","Call Girls in Patna","Patna Escorts Service","Patna Escorts",
+                "Call Girls Patna","Escort Service Patna","VIP Escorts Patna","Independent Escorts Patna",
+                "College Call Girls Patna","Housewife Escorts Patna","Model Escorts Patna","Overnight Escorts Patna",
               ].map((tag) => (
                 <span
                   key={tag}
-                  className="text-xs px-4 py-2 rounded-full font-medium"
-                  style={{
-                    background: "rgba(240,24,125,0.12)",
-                    border: "1px solid rgba(240,24,125,0.25)",
-                    color: "rgba(255,255,255,0.75)",
-                  }}
+                  className="text-xs px-3 py-1.5 rounded-full font-medium"
+                  style={{ background: "rgba(240,24,125,0.1)", border: "1px solid rgba(240,24,125,0.22)", color: "rgba(255,255,255,0.7)" }}
                 >
                   {tag}
                 </span>
               ))}
             </div>
           </div>
+
         </div>
       </section>
 
