@@ -59,38 +59,40 @@ export default function Home() {
 
   return (
     <div className="w-full">
-      {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        {/* Background image */}
+      {/* Hero Section — fills viewport below sticky navbar (h-20 = 5rem) */}
+      <section className="relative flex items-center justify-center overflow-hidden"
+        style={{ minHeight: 'calc(100svh - 5rem)' }}
+      >
+        {/* Background image — object-top keeps focus on faces on mobile portrait */}
         <div className="absolute inset-0 z-0">
           <Image
             src="/images/banner.webp"
             alt="Premium Escorts in Patna"
             fill
             sizes="100vw"
-            className="object-cover object-center"
+            className="object-cover object-top"
             priority
           />
-          {/* Top-down cinematic gradient */}
-          <div className="absolute inset-0 bg-gradient-to-b from-slate-900/60 via-purple-900/40 to-slate-900/95" />
-          {/* Side vignette */}
-          <div className="absolute inset-0 bg-gradient-to-r from-slate-900/70 via-transparent to-slate-900/70" />
+          {/* Dark overlay for readability — stronger on mobile */}
+          <div className="absolute inset-0 bg-gradient-to-b from-slate-900/75 via-slate-900/50 to-slate-900/90 sm:from-slate-900/60 sm:via-purple-900/40 sm:to-slate-900/95" />
+          <div className="absolute inset-0 bg-gradient-to-r from-slate-900/60 via-transparent to-slate-900/60" />
         </div>
 
-        {/* Content */}
-        <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center py-24 sm:py-36">
-          {/* Badge — animates first */}
+        {/* Content — tighter padding on mobile, generous on desktop */}
+        <div className="relative z-10 w-full max-w-5xl mx-auto px-5 sm:px-8 lg:px-12 text-center py-12 sm:py-20 lg:py-28">
+
+          {/* Badge */}
           <div
-            className="inline-flex items-center gap-2 bg-pink-500/20 border border-pink-500/50 rounded-full px-4 py-2 mb-8"
+            className="inline-flex items-center gap-2 bg-pink-500/20 border border-pink-500/40 rounded-full px-4 py-1.5 mb-5 sm:mb-7"
             style={{ animation: 'fade-in 0.6s ease-out 0.1s both' }}
           >
-            <span className="w-2 h-2 rounded-full bg-pink-500 animate-pulse" />
-            <span className="text-pink-400 font-semibold text-sm tracking-wide">Patna's #1 Escort Platform</span>
+            <span className="w-2 h-2 rounded-full bg-pink-500 animate-pulse shrink-0" />
+            <span className="text-pink-400 font-semibold text-xs sm:text-sm tracking-wide">Patna&apos;s #1 Escort Platform</span>
           </div>
 
-          {/* Main Heading — animates second */}
+          {/* Main Heading */}
           <h1
-            className="font-playfair text-4xl sm:text-6xl md:text-7xl font-bold text-white mb-6 leading-tight"
+            className="font-playfair text-[2.4rem] leading-[1.1] sm:text-6xl md:text-7xl font-bold text-white mb-4 sm:mb-6"
             style={{ animation: 'fade-in 0.7s ease-out 0.25s both' }}
           >
             Meet Premium
@@ -98,57 +100,66 @@ export default function Home() {
             <span className="gradient-text">Escorts in Patna</span>
           </h1>
 
-          {/* Subtitle — animates third */}
-          <p
-            className="text-gray-200 text-lg sm:text-xl mb-10 max-w-2xl mx-auto leading-relaxed"
+          {/* Subtitle — stacked on mobile to avoid ugly wrapping */}
+          <div
+            className="mb-8 sm:mb-10"
             style={{ animation: 'fade-in 0.7s ease-out 0.4s both' }}
           >
-            Book 100% verified call girls &bull; Incall &amp; Outcall &bull; 50+ locations &bull; Starting ₹9,000
-          </p>
+            {/* Desktop: single line with separators */}
+            <p className="hidden sm:block text-gray-200 text-lg sm:text-xl max-w-2xl mx-auto leading-relaxed">
+              100% Verified Call Girls &nbsp;&bull;&nbsp; Incall &amp; Outcall &nbsp;&bull;&nbsp; 50+ Locations &nbsp;&bull;&nbsp; From ₹9,000
+            </p>
+            {/* Mobile: two clean lines */}
+            <p className="sm:hidden text-gray-200 text-base leading-relaxed">
+              100% Verified &bull; Incall &amp; Outcall
+              <br />
+              50+ Locations &bull; From ₹9,000/hr
+            </p>
+          </div>
 
-          {/* CTA Buttons — animates fourth */}
+          {/* CTA Buttons — full-width on mobile (min 52px touch target), side-by-side on sm+ */}
           <div
-            className="flex flex-col sm:flex-row gap-4 justify-center mb-14"
+            className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center mb-10 sm:mb-14 w-full sm:w-auto max-w-xs sm:max-w-none mx-auto"
             style={{ animation: 'fade-in 0.7s ease-out 0.55s both' }}
           >
             <a
               href="https://wa.me/919229604907?text=Hi%2C%20I%20want%20to%20book%20an%20escort%20in%20Patna"
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-gradient text-white px-8 py-4 rounded-full font-bold text-lg shadow-lg inline-flex items-center justify-center gap-2"
+              className="btn-gradient text-white px-8 py-3.5 sm:py-4 rounded-full font-bold text-base sm:text-lg shadow-xl inline-flex items-center justify-center gap-2 min-h-[52px]"
             >
               📱 Book on WhatsApp
             </a>
             <Link
               href="/gallery"
-              className="backdrop-blur-sm bg-white/10 hover:bg-white/20 text-white px-8 py-4 rounded-full font-bold text-lg border-2 border-white/60 hover:border-white transition-all inline-flex items-center justify-center gap-2"
+              className="bg-white/10 hover:bg-white/20 text-white px-8 py-3.5 sm:py-4 rounded-full font-bold text-base sm:text-lg border-2 border-white/60 hover:border-white transition-all inline-flex items-center justify-center gap-2 min-h-[52px]"
             >
               👀 View Gallery
             </Link>
           </div>
 
-          {/* Stats — animates last */}
+          {/* Stats — wider on desktop, compact on mobile */}
           <div
-            className="grid grid-cols-3 gap-4 max-w-sm mx-auto"
+            className="grid grid-cols-3 gap-3 sm:gap-6 max-w-xs sm:max-w-lg mx-auto"
             style={{ animation: 'fade-in 0.7s ease-out 0.7s both' }}
           >
-            <div className="glass p-4 rounded-xl text-center">
-              <div className="text-2xl sm:text-3xl font-bold text-pink-500">100+</div>
-              <div className="text-gray-400 text-xs mt-1">Models</div>
+            <div className="glass p-3 sm:p-5 rounded-xl text-center">
+              <div className="text-xl sm:text-3xl font-bold text-pink-500">100+</div>
+              <div className="text-gray-400 text-xs sm:text-sm mt-1">Models</div>
             </div>
-            <div className="glass p-4 rounded-xl text-center">
-              <div className="text-2xl sm:text-3xl font-bold text-pink-500">50+</div>
-              <div className="text-gray-400 text-xs mt-1">Locations</div>
+            <div className="glass p-3 sm:p-5 rounded-xl text-center">
+              <div className="text-xl sm:text-3xl font-bold text-pink-500">50+</div>
+              <div className="text-gray-400 text-xs sm:text-sm mt-1">Locations</div>
             </div>
-            <div className="glass p-4 rounded-xl text-center">
-              <div className="text-2xl sm:text-3xl font-bold text-pink-500">24/7</div>
-              <div className="text-gray-400 text-xs mt-1">Available</div>
+            <div className="glass p-3 sm:p-5 rounded-xl text-center">
+              <div className="text-xl sm:text-3xl font-bold text-pink-500">24/7</div>
+              <div className="text-gray-400 text-xs sm:text-sm mt-1">Available</div>
             </div>
           </div>
         </div>
 
-        {/* Scroll indicator */}
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 animate-bounce">
+        {/* Scroll indicator — hidden on very small screens */}
+        <div className="hidden sm:flex absolute bottom-6 left-1/2 -translate-x-1/2 z-10 animate-bounce">
           <div className="w-6 h-10 border-2 border-pink-500/70 rounded-full flex items-start justify-center pt-2">
             <div className="w-1 h-2.5 bg-pink-500 rounded-full" />
           </div>
