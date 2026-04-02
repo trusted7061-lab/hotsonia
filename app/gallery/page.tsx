@@ -64,7 +64,7 @@ export default function Gallery() {
                     src={model.image}
                     alt={model.name}
                     fill
-                    className="object-cover group-hover:scale-110 transition-transform duration-400"
+                    className="object-cover group-hover:scale-110 transition-transform duration-300"
                   />
                   
                   {/* Overlay */}

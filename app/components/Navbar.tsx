@@ -98,7 +98,7 @@ export default function Navbar() {
 
           {/* Mobile Menu */}
           {isMobileNavOpen && (
-            <div className="lg:hidden pb-6 border-t border-pink-500/20 mt-4 animate-in slide-in-from-top-2">
+            <div className="lg:hidden pb-6 border-t border-pink-500/20 mt-4 slide-down">
               <ul className="flex flex-col gap-3 pt-6">
                 {[
                   { href: '/', label: 'Home' },
