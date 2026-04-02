@@ -144,7 +144,7 @@ const localBusinessSchema = {
       caption: "Hot Sonia Logo — Patna Escorts",
     },
   ],
-  telephone: "+91-9999999999",
+  telephone: "+91-9229604907",
   address: {
     "@type": "PostalAddress",
     streetAddress: "Patna City",

@@ -61,7 +61,7 @@ export default function ContactPage() {
               </h2>
               <div className="space-y-4">
                 {[
-                  { icon: "📞", label: "Phone / WhatsApp", value: "+91 99999 99999", href: "tel:+919999999999" },
+                  { icon: "📞", label: "Phone / WhatsApp", value: "+91 92296 04907", href: "tel:+919229604907" },
                   { icon: "📧", label: "Email",            value: "contact@hotsonia.com", href: "mailto:contact@hotsonia.com" },
                   { icon: "📍", label: "Location",         value: "Patna, Bihar, India", href: null },
                   { icon: "⏰", label: "Availability",     value: "24 Hours, 7 Days a Week", href: null },

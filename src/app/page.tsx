@@ -875,7 +875,7 @@ export default function HomePage() {
               Book Now \u2728
             </Link>
             <a
-              href="tel:+919999999999"
+              href="tel:+919229604907"
               className="border-2 border-white/55 hover:border-white text-white font-semibold px-10 py-4 rounded-full transition-colors text-base"
             >
               \ud83d\udcde Call Us Now

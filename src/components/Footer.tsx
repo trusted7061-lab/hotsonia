@@ -23,8 +23,8 @@ export default function Footer() {
             <p className="text-sm leading-relaxed mb-5" style={{ color: "rgba(255,255,255,0.45)" }}>
               Patna&apos;s most exclusive, trusted, and discreet companion service. Available 24/7 for your pleasure.
             </p>
-            <a href="tel:+919999999999" className="text-sm font-bold" style={{ color: "#f0187d" }}>
-              📞 +91 99999 99999
+            <a href="tel:+919229604907" className="text-sm font-bold" style={{ color: "#f0187d" }}>
+              📞 +91 92296 04907
             </a>
           </div>
 

@@ -104,7 +104,7 @@ export default async function LocationPage({
     name: `Hot Sonia — Escorts in ${loc.name} Patna`,
     description: `Premium Escort & Call Girl service in ${loc.name}, Patna. Available 24/7 for in-call, out-call & overnight.`,
     url: `${BASE_URL}/${loc.slug}`,
-    telephone: "+91-9999999999",
+    telephone: "+91-9229604907",
     image: `${BASE_URL}/images/banner.webp`,
     address: {
       "@type": "PostalAddress",
@@ -236,7 +236,7 @@ export default async function LocationPage({
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-14">
-            <a href="tel:+919999999999" className="btn-gradient glow-pink text-white font-bold px-10 py-4 rounded-full text-base">
+            <a href="tel:+919229604907" className="btn-gradient glow-pink text-white font-bold px-10 py-4 rounded-full text-base">
               📞 Call Now ✨
             </a>
             <Link
@@ -634,10 +634,10 @@ export default async function LocationPage({
             100% discreet · Verified companions · Instant booking · {loc.area}, Patna
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="tel:+919999999999" className="btn-gradient glow-pink text-white font-bold px-10 py-4 rounded-full text-base">
+            <a href="tel:+919229604907" className="btn-gradient glow-pink text-white font-bold px-10 py-4 rounded-full text-base">
               📞 Call Now
             </a>
-            <a href="https://wa.me/919999999999" target="_blank" rel="noopener noreferrer"
+            <a href="https://wa.me/919229604907" target="_blank" rel="noopener noreferrer"
               className="px-10 py-4 rounded-full font-bold border-2 text-base transition-colors hover:bg-white/10"
               style={{ borderColor: "#f5c842", color: "#f5c842" }}>
               💬 WhatsApp
