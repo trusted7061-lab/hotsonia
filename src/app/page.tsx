@@ -4,9 +4,9 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title:
-    "Escorts in Patna | Call Girls in Patna | #1 Patna Escorts Service — Hot Sonia",
+    "Escorts in Patna | Call Girls in Patna | Hot Sonia",
   description:
-    "Hot Sonia — Best Escorts in Patna & premium Call Girls in Patna. Patna Escorts Service available 24/7. Verified beautiful companions for in-call, out-call & overnight. Book now.",
+    "Hot Sonia — #1 Escorts in Patna. Premium Call Girls, verified companions for in-call, out-call & overnight. Available 24/7. Book Now.",
   alternates: { canonical: "https://hotsonia.com" },
   openGraph: {
     title:
@@ -24,18 +24,18 @@ export const metadata: Metadata = {
 };
 
 const featured = [
-  { name: "Sonia",   img: "/images/soniya.webp",  tag: "⭐ Star Girl",  alt: "Sonia — Call Girl in Patna | Star Escort Patna | Patna Escorts Service" },
-  { name: "Priya",   img: "/images/priya.webp",   tag: "💎 Elite",      alt: "Priya — Elite Call Girl Patna | Escorts in Patna | Hot Sonia" },
-  { name: "Anaya",   img: "/images/anaya.webp",   tag: "✨ VIP",        alt: "Anaya — VIP Escort in Patna | Premium Call Girl Patna | Hot Sonia" },
-  { name: "Natasha", img: "/images/natasha.webp", tag: "🔥 Hot Pick",   alt: "Natasha — Hot Escort in Patna | Call Girls Patna | Patna Escorts Service" },
-  { name: "Diya",    img: "/images/diya.webp",    tag: "💫 Premium",    alt: "Diya — Premium Call Girl in Patna | Young Escort Patna | Hot Sonia" },
-  { name: "Neelima", img: "/images/neelima.webp", tag: "👑 Exclusive",  alt: "Neelima — Exclusive Escort Patna | Top Call Girls in Patna | Hot Sonia" },
-  { name: "Aafrin",  img: "/images/aafrin.webp",  tag: "🌙 Mystique",  alt: "Aafrin — Mystique Escort Patna | Call Girl Patna | Hot Sonia" },
-  { name: "Jamila",  img: "/images/jamila.webp",  tag: "🌹 Charming",  alt: "Jamila — Charming Call Girl Patna | Escorts in Patna | Hot Sonia" },
-  { name: "Janu",    img: "/images/janu.webp",    tag: "💋 Sensual",   alt: "Janu — Sensual Escort Patna | Call Girls in Patna | Hot Sonia" },
-  { name: "Neethu",  img: "/images/neethu.webp",  tag: "✨ Fresh",     alt: "Neethu — Fresh Escort Patna | Young Call Girl Patna | Hot Sonia" },
-  { name: "Poonam",  img: "/images/poonam.webp",  tag: "🔥 Bold",      alt: "Poonam — Bold Call Girl Patna | Escorts in Patna | Hot Sonia" },
-  { name: "Sufia",   img: "/images/sufia.webp",   tag: "💎 Divine",    alt: "Sufia — Divine Escort Patna | Premium Call Girl Patna | Hot Sonia" },
+  { name: "Sonia",   img: "/images/soniya.webp",  tag: "⭐ Star Girl",  alt: "Sonia, premium companion and escort in Patna" },
+  { name: "Priya",   img: "/images/priya.webp",   tag: "💎 Elite",      alt: "Priya, elite escort companion in Patna" },
+  { name: "Anaya",   img: "/images/anaya.webp",   tag: "✨ VIP",        alt: "Anaya, VIP escort in Patna" },
+  { name: "Natasha", img: "/images/natasha.webp", tag: "🔥 Hot Pick",   alt: "Natasha, escort companion in Patna" },
+  { name: "Diya",    img: "/images/diya.webp",    tag: "💫 Premium",    alt: "Diya, premium call girl in Patna" },
+  { name: "Neelima", img: "/images/neelima.webp", tag: "👑 Exclusive",  alt: "Neelima, exclusive escort in Patna" },
+  { name: "Aafrin",  img: "/images/aafrin.webp",  tag: "🌙 Mystique",  alt: "Aafrin, escort companion in Patna" },
+  { name: "Jamila",  img: "/images/jamila.webp",  tag: "🌹 Charming",  alt: "Jamila, charming call girl in Patna" },
+  { name: "Janu",    img: "/images/janu.webp",    tag: "💋 Sensual",   alt: "Janu, escort companion in Patna" },
+  { name: "Neethu",  img: "/images/neethu.webp",  tag: "✨ Fresh",     alt: "Neethu, escort companion in Patna" },
+  { name: "Poonam",  img: "/images/poonam.webp",  tag: "🔥 Bold",      alt: "Poonam, call girl in Patna" },
+  { name: "Sufia",   img: "/images/sufia.webp",   tag: "💎 Divine",    alt: "Sufia, premium escort in Patna" },
 ];
 
 const services = [
@@ -165,7 +165,7 @@ export default function HomePage() {
         <div className="absolute inset-0">
           <Image
             src="/images/banner.webp"
-            alt="Escorts in Patna — Hot Sonia Premium Call Girls Patna | Patna Escorts Service"
+            alt="Escorts in Patna — Hot Sonia luxury banner"
             fill
             className="object-cover object-top"
             priority
@@ -189,7 +189,7 @@ export default function HomePage() {
         <div className="relative z-10 text-center px-4 max-w-4xl mx-auto pt-24 pb-20">
           <Image
             src="/images/logo.png"
-            alt="Hot Sonia — Best Escorts in Patna | Call Girls Patna | Patna Escorts Service"
+            alt="Hot Sonia logo — Escorts in Patna"
             width={280}
             height={112}
             className="h-28 sm:h-36 w-auto object-contain mx-auto mb-6 drop-shadow-2xl"

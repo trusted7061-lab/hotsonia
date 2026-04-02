@@ -4,9 +4,9 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title:
-    "Call Girls in Patna — Photos & Gallery | Patna Escorts Photos | Hot Sonia",
+    "Call Girls in Patna — Photo Gallery | Hot Sonia",
   description:
-    "Browse real photos of 12 verified call girls in Patna. Patna Escorts gallery — beautiful, verified companions for in-call, out-call & overnight. 100% real photos, no fakes.",
+    "Browse real photos of 12 verified call girls in Patna. Beautiful Patna Escorts for in-call, out-call & overnight. 100% real, no fakes.",
   alternates: { canonical: "https://hotsonia.com/gallery" },
   openGraph: {
     title: "Call Girls in Patna — Photo Gallery | Patna Escorts | Hot Sonia",

@@ -2,9 +2,9 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Patna Escorts Service | Call Girls Services & Rates | Hot Sonia Patna",
+  title: "Patna Escorts Service | Packages & Rates — Hot Sonia",
   description:
-    "Hot Sonia offers the best Patna Escorts Service. In-call from Rs.3,000, out-call from Rs.4,000, overnight from Rs.12,000. Premium Call Girls in Patna for every desire. Available 24/7.",
+    "Hot Sonia Patna Escorts Service — in-call from ₹3,000, out-call ₹4,000, overnight ₹12,000. Premium Call Girls in Patna, available 24/7.",
   alternates: { canonical: "https://hotsonia.com/services" },
   openGraph: {
     title: "Patna Escorts Service | Rates & Packages | Hot Sonia",

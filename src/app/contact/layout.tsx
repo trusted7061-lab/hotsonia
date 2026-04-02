@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Book Escorts in Patna | Contact Hot Sonia Patna Escorts Service",
+  title: "Book Escorts in Patna | Contact Hot Sonia",
   description:
-    "Book escorts in Patna or call girls in Patna now. Contact Hot Sonia — Patna Escorts Service available 24/7. Fast, 100% discreet booking via call, WhatsApp, or online form.",
+    "Book escorts in Patna now. Hot Sonia Patna Escorts Service — fast, 100% discreet booking via call or WhatsApp. Available 24/7.",
   alternates: { canonical: "https://hotsonia.com/contact" },
   openGraph: {
     title: "Book Escorts in Patna | Contact Hot Sonia Patna Escorts Service",

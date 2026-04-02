@@ -184,7 +184,7 @@ export default async function LocationPage({
         <div className="absolute inset-0">
           <Image
             src="/images/banner.webp"
-            alt={`Escorts in ${loc.name} Patna — Hot Sonia Premium Call Girls ${loc.area} | Patna Escorts Service`}
+            alt={`Escorts in ${loc.name} Patna — Hot Sonia`}
             fill
             className="object-cover object-top"
             priority
@@ -202,7 +202,7 @@ export default async function LocationPage({
         <div className="relative z-10 text-center px-4 max-w-4xl mx-auto pt-24 pb-20">
           <Image
             src="/images/logo.png"
-            alt="Hot Sonia — Best Escorts in Patna | Call Girls Patna | Patna Escorts Service"
+            alt="Hot Sonia logo — Escorts in Patna"
             width={280}
             height={112}
             className="h-28 sm:h-36 w-auto object-contain mx-auto mb-6 drop-shadow-2xl"
@@ -298,7 +298,7 @@ export default async function LocationPage({
                 <div className="relative aspect-[3/4]">
                   <Image
                     src={c.img}
-                    alt={`${c.name} — Escort in ${loc.name} Patna | Call Girl ${loc.area} | Hot Sonia`}
+                    alt={`${c.name}, escort companion in ${loc.name}, Patna`}
                     fill
                     className="object-cover"
                     sizes="(max-width:640px) 100vw,(max-width:1024px) 50vw,25vw"

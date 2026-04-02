@@ -3,7 +3,7 @@ import Image from "next/image";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "About Hot Sonia | #1 Escort Agency in Patna | Patna Escorts Service",
+  title: "About Hot Sonia | #1 Escort Agency in Patna",
   description:
     "Learn about Hot Sonia — Patna's most trusted escort agency. 5+ years of premium escorts in Patna, 500+ happy clients, 12+ verified call girls in Patna. Discreet, safe, reliable.",
   alternates: { canonical: "https://hotsonia.com/about" },
