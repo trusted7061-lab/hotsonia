@@ -42,3 +42,24 @@ html { scroll-behavior: smooth; }
 .companion-card:hover .companion-info { opacity: 1; }
 .companion-card img { transition: transform 0.5s ease; }
 .companion-card:hover img { transform: scale(1.07); }
+
+@keyframes marquee-left {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+@keyframes marquee-right {
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
+}
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee-left 40s linear infinite;
+}
+.marquee-track:hover { animation-play-state: paused; }
+.marquee-track-reverse {
+  display: flex;
+  width: max-content;
+  animation: marquee-right 40s linear infinite;
+}
+.marquee-track-reverse:hover { animation-play-state: paused; }

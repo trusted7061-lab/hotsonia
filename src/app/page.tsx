@@ -24,42 +24,18 @@ export const metadata: Metadata = {
 };
 
 const featured = [
-  {
-    name: "Sonia",
-    img: "/images/soniya.webp",
-    tag: "\u2b50 Star Girl",
-    alt: "Sonia — Call Girl in Patna | Star Escort Patna | Patna Escorts Service",
-  },
-  {
-    name: "Priya",
-    img: "/images/priya.webp",
-    tag: "\ud83d\udc8e Elite",
-    alt: "Priya — Elite Call Girl Patna | Escorts in Patna | Hot Sonia",
-  },
-  {
-    name: "Anaya",
-    img: "/images/anaya.webp",
-    tag: "\u2728 VIP",
-    alt: "Anaya — VIP Escort in Patna | Premium Call Girl Patna | Hot Sonia",
-  },
-  {
-    name: "Natasha",
-    img: "/images/natasha.webp",
-    tag: "\ud83d\udd25 Hot Pick",
-    alt: "Natasha — Hot Escort in Patna | Call Girls Patna | Patna Escorts Service",
-  },
-  {
-    name: "Diya",
-    img: "/images/diya.webp",
-    tag: "\ud83d\udcab Premium",
-    alt: "Diya — Premium Call Girl in Patna | Young Escort Patna | Hot Sonia",
-  },
-  {
-    name: "Neelima",
-    img: "/images/neelima.webp",
-    tag: "\ud83d\udc51 Exclusive",
-    alt: "Neelima — Exclusive Escort Patna | Top Call Girls in Patna | Hot Sonia",
-  },
+  { name: "Sonia",   img: "/images/soniya.webp",  tag: "⭐ Star Girl",  alt: "Sonia — Call Girl in Patna | Star Escort Patna | Patna Escorts Service" },
+  { name: "Priya",   img: "/images/priya.webp",   tag: "💎 Elite",      alt: "Priya — Elite Call Girl Patna | Escorts in Patna | Hot Sonia" },
+  { name: "Anaya",   img: "/images/anaya.webp",   tag: "✨ VIP",        alt: "Anaya — VIP Escort in Patna | Premium Call Girl Patna | Hot Sonia" },
+  { name: "Natasha", img: "/images/natasha.webp", tag: "🔥 Hot Pick",   alt: "Natasha — Hot Escort in Patna | Call Girls Patna | Patna Escorts Service" },
+  { name: "Diya",    img: "/images/diya.webp",    tag: "💫 Premium",    alt: "Diya — Premium Call Girl in Patna | Young Escort Patna | Hot Sonia" },
+  { name: "Neelima", img: "/images/neelima.webp", tag: "👑 Exclusive",  alt: "Neelima — Exclusive Escort Patna | Top Call Girls in Patna | Hot Sonia" },
+  { name: "Aafrin",  img: "/images/aafrin.webp",  tag: "🌙 Mystique",  alt: "Aafrin — Mystique Escort Patna | Call Girl Patna | Hot Sonia" },
+  { name: "Jamila",  img: "/images/jamila.webp",  tag: "🌹 Charming",  alt: "Jamila — Charming Call Girl Patna | Escorts in Patna | Hot Sonia" },
+  { name: "Janu",    img: "/images/janu.webp",    tag: "💋 Sensual",   alt: "Janu — Sensual Escort Patna | Call Girls in Patna | Hot Sonia" },
+  { name: "Neethu",  img: "/images/neethu.webp",  tag: "✨ Fresh",     alt: "Neethu — Fresh Escort Patna | Young Call Girl Patna | Hot Sonia" },
+  { name: "Poonam",  img: "/images/poonam.webp",  tag: "🔥 Bold",      alt: "Poonam — Bold Call Girl Patna | Escorts in Patna | Hot Sonia" },
+  { name: "Sufia",   img: "/images/sufia.webp",   tag: "💎 Divine",    alt: "Sufia — Divine Escort Patna | Premium Call Girl Patna | Hot Sonia" },
 ];
 
 const services = [
@@ -292,27 +268,35 @@ export default function HomePage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
-            {featured.map((c) => (
+        </div>{/* close max-w-7xl — marquees are full-width */}
+
+        {/* ── Row 1: scrolls LEFT ── */}
+        <div
+          className="relative overflow-hidden mt-2"
+          style={{
+            maskImage: "linear-gradient(90deg, transparent 0%, black 6%, black 94%, transparent 100%)",
+            WebkitMaskImage: "linear-gradient(90deg, transparent 0%, black 6%, black 94%, transparent 100%)",
+          }}
+        >
+          <div className="marquee-track gap-3 py-2">
+            {[...featured, ...featured].map((c, i) => (
               <Link
                 href="/gallery"
-                key={c.name}
-                className="companion-card group relative rounded-2xl overflow-hidden block"
-                style={{ border: "1px solid rgba(240,24,125,0.15)" }}
+                key={`row1-${i}`}
+                className="companion-card flex-shrink-0 rounded-2xl overflow-hidden block group"
+                style={{ width: "190px", border: "1px solid rgba(240,24,125,0.18)" }}
               >
-                <div className="relative aspect-[3/4]">
+                <div className="relative" style={{ height: "270px" }}>
                   <Image
                     src={c.img}
                     alt={c.alt}
                     fill
                     className="object-cover"
-                    sizes="(max-width:640px) 50vw, (max-width:1024px) 33vw, 16vw"
+                    sizes="190px"
                   />
                   <div
                     className="absolute inset-0"
-                    style={{
-                      background: "linear-gradient(180deg, transparent 45%, rgba(10,2,8,0.96) 100%)",
-                    }}
+                    style={{ background: "linear-gradient(180deg, transparent 40%, rgba(10,2,8,0.95) 100%)" }}
                   />
                   <div className="absolute bottom-0 left-0 right-0 p-3">
                     <div className="text-white font-bold text-sm" style={{ fontFamily: "var(--font-playfair)" }}>
@@ -330,14 +314,62 @@ export default function HomePage() {
               </Link>
             ))}
           </div>
+        </div>
 
+        {/* ── Row 2: scrolls RIGHT ── */}
+        <div
+          className="relative overflow-hidden mt-3"
+          style={{
+            maskImage: "linear-gradient(90deg, transparent 0%, black 6%, black 94%, transparent 100%)",
+            WebkitMaskImage: "linear-gradient(90deg, transparent 0%, black 6%, black 94%, transparent 100%)",
+          }}
+        >
+          <div className="marquee-track-reverse gap-3 py-2">
+            {[...featured].reverse().concat([...featured].reverse()).map((c, i) => (
+              <Link
+                href="/gallery"
+                key={`row2-${i}`}
+                className="companion-card flex-shrink-0 rounded-2xl overflow-hidden block group"
+                style={{ width: "190px", border: "1px solid rgba(240,24,125,0.18)" }}
+              >
+                <div className="relative" style={{ height: "270px" }}>
+                  <Image
+                    src={c.img}
+                    alt={c.alt}
+                    fill
+                    className="object-cover"
+                    sizes="190px"
+                  />
+                  <div
+                    className="absolute inset-0"
+                    style={{ background: "linear-gradient(180deg, transparent 40%, rgba(10,2,8,0.95) 100%)" }}
+                  />
+                  <div className="absolute bottom-0 left-0 right-0 p-3">
+                    <div className="text-white font-bold text-sm" style={{ fontFamily: "var(--font-playfair)" }}>
+                      {c.name}
+                    </div>
+                    <div className="text-xs mt-0.5" style={{ color: "#f5c842" }}>{c.tag}</div>
+                    <div
+                      className="companion-info mt-2 text-xs font-semibold text-center py-1.5 rounded-full btn-gradient"
+                      style={{ color: "#fff" }}
+                    >
+                      Book Now
+                    </div>
+                  </div>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mt-10">
             <Link
               href="/gallery"
               className="inline-flex items-center gap-2 font-semibold text-sm px-8 py-3 rounded-full border-2 transition-all duration-300"
               style={{ borderColor: "#f0187d", color: "#f0187d" }}
             >
-              View All 12 Call Girls in Patna \u2192
+              View All 12 Call Girls in Patna →
             </Link>
           </div>
         </div>
