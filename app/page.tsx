@@ -184,7 +184,7 @@ export default function Home() {
             {models.map((model) => (
               <div key={model.name} className="group flex flex-col">
                 {/* Image */}
-                <div className="relative rounded-2xl overflow-hidden mb-4 card-hover" style={{ aspectRatio: '3/4' }}>
+                <div className="relative rounded-2xl overflow-hidden mb-4 card-hover" style={{ height: '420px' }}>
                   <Image
                     src={model.image}
                     alt={`${model.name} - Escort in Patna`}
