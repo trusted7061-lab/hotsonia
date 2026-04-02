@@ -49,51 +49,40 @@ export default async function LocationPage(props: { params: Params }) {
   }
 
   return (
-    <div>
+    <div className="w-full">
       {/* Page Header */}
-      <section className="py-12 px-4 bg-gray-900/50 border-b border-pink-600/20">
-        <div className="max-w-7xl mx-auto">
-          <Link href="/links" className="text-pink-500 hover:text-pink-400 mb-4 inline-block">
-            ← Back to All Locations
+      <section className="py-12 sm:py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-slate-900 to-slate-900/50 border-b border-pink-600/20">
+        <div className="max-w-6xl mx-auto">
+          <Link href="/links" className="text-pink-500 hover:text-pink-400 mb-6 inline-block font-bold">
+            ← Back to Locations
           </Link>
-          <h1 className="font-playfair text-4xl md:text-5xl text-white mb-4">
-            Escorts In <span className="text-pink-500">{location.name}</span> Patna
+          <div className="inline-flex items-center gap-2 bg-pink-500/20 border border-pink-500/50 rounded-full px-4 py-2 mb-6">
+            <span className="text-pink-400 font-medium text-sm">📍 {location.name}</span>
+          </div>
+          <h1 className="font-playfair text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-4">
+            Escorts In
+            <br />
+            <span className="gradient-text">{location.name}, Patna</span>
           </h1>
-          <p className="text-gray-400">
-            Book verified call girls in {location.name} from ₹9,000. Incall & outcall 24/7 at hotels.
-            Verified models, doorstep delivery.
+          <p className="text-gray-300 text-lg max-w-2xl">
+            Verified premium escorts available 24/7. Incall & outcall services. Starting from ₹9,000/hour.
           </p>
         </div>
       </section>
 
-      {/* Breadcrumb */}
-      <section className="py-4 px-4 bg-gray-900/30 border-b border-pink-600/10">
-        <div className="max-w-7xl mx-auto text-sm text-gray-400">
-          <Link href="/" className="text-pink-500 hover:text-pink-400">
-            Home
-          </Link>
-          {' > '}
-          <Link href="/links" className="text-pink-500 hover:text-pink-400">
-            Locations
-          </Link>
-          {' > '}
-          <span>{location.name}</span>
-        </div>
-      </section>
-
       {/* About Section */}
-      <section className="py-16 px-4">
+      <section className="py-16 sm:py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
-          <div className="bg-gradient-to-br from-gray-900 to-gray-950 border border-pink-600/25 border-l-4 border-l-pink-600 rounded-xl p-8">
-            <h2 className="font-playfair text-2xl text-white mb-4">
-              Escorts In <span className="text-pink-500">{location.name}</span>
+          <div className="glass p-8 sm:p-10 rounded-2xl border border-pink-600/30">
+            <h2 className="font-playfair text-2xl sm:text-3xl text-white mb-4">
+              Premium Escorts In <span className="gradient-text">{location.name}</span>
             </h2>
-            <p className="text-gray-300 leading-relaxed">
-              Looking for high-profile, verified escorts in <strong>{location.name}, Patna</strong>?
-              We provide premium call girl services in {location.name} with 100% genuine models
-              available <strong>24 hours a day, 7 days a week</strong>. Our escorts offer both{' '}
-              <strong>incall and outcall services</strong> starting from <strong>₹9,000 per hour</strong>
-              . Whether you're looking for companionship for a dinner date, party, or private meeting,
+            <p className="text-gray-300 leading-relaxed text-lg">
+              Looking for verified escorts in <strong>{location.name}, Patna</strong>?
+              We provide premium call girl services with 100% genuine models
+              available <strong>24/7</strong>. Our escorts offer both{' '}
+              <strong>incall and outcall services</strong> starting from <strong>₹9,000/hour</strong>.
+              Whether you're looking for companionship for a dinner date, party, or private meeting,
               our {location.name} escorts deliver premium, discreet service with 100% satisfaction
               guaranteed.
             </p>
@@ -102,43 +91,59 @@ export default async function LocationPage(props: { params: Params }) {
       </section>
 
       {/* Models in this location */}
-      <section className="py-16 px-4 bg-gray-900/50">
-        <div className="max-w-7xl mx-auto">
+      <section className="py-16 sm:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-pink-600/5 to-purple-600/5 border-y border-pink-600/20">
+        <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="font-playfair text-3xl text-white mb-2">
+            <h2 className="font-playfair text-3xl sm:text-4xl text-white mb-2">
               Available Escorts In {location.name}
             </h2>
-            <p className="text-gray-400">Recently updated - All models verified and available now</p>
+            <p className="text-gray-400">Recently updated - All models verified and available 24/7</p>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
             {models.map((model) => (
-              <div
-                key={model.name}
-                className="group rounded-lg overflow-hidden bg-gray-900 border border-pink-600/20 hover:border-pink-600/50 transition"
-              >
-                <div className="relative h-72 overflow-hidden">
+              <div key={model.name} className="group">
+                <div className="relative h-96 rounded-2xl overflow-hidden mb-4 card-hover">
                   <Image
                     src={model.image}
                     alt={`${model.name} in ${location.name}`}
                     fill
-                    className="object-cover group-hover:scale-105 transition duration-300"
+                    className="object-cover group-hover:scale-110 transition-transform duration-400"
                   />
-                  <span className="absolute top-3 right-3 bg-pink-600 text-white text-xs font-bold px-2.5 py-1 rounded-full">
-                    {model.badge}
-                  </span>
+                  
+                  {/* Overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-end justify-between p-4">
+                    <div className="text-right">
+                      <span className="bg-pink-600/90 backdrop-blur text-white px-3 py-1 rounded-full text-sm font-bold">✓ Verified</span>
+                    </div>
+                    <div className="w-full">
+                      <a
+                        href={`https://wa.me/919229604907?text=Hi%2C%20I%20want%20to%20book%20${model.name}%20in%20${location.name}%2C%20Patna`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="w-full bg-gradient-to-r from-pink-600 to-purple-600 hover:from-pink-700 hover:to-purple-700 text-white py-3 rounded-xl font-bold text-center transition-all block"
+                      >
+                        Book Now
+                      </a>
+                    </div>
+                  </div>
+
+                  {/* Badge */}
+                  <div className="absolute top-3 left-3">
+                    <span className="bg-pink-600/90 backdrop-blur text-white text-xs font-bold px-3 py-1 rounded-full">
+                      {model.badge}
+                    </span>
+                  </div>
                 </div>
-                <div className="p-4">
-                  <h3 className="font-semibold text-lg text-white mb-1">{model.name}</h3>
-                  <p className="text-gray-400 text-sm mb-3">{model.type}</p>
-                  <a
-                    href={`https://wa.me/919229604907?text=Hi%2C%20I%20want%20to%20book%20${model.name}%20in%20${location.name}%2C%20Patna`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="block text-center bg-pink-600 hover:bg-pink-700 text-white py-2 rounded-lg text-sm font-semibold transition"
-                  >
-                    Book Now
-                  </a>
+
+                {/* Info Card */}
+                <div className="glass p-5 rounded-xl">
+                  <h3 className="text-white font-bold text-lg">{model.name}</h3>
+                  <p className="text-gray-400 text-sm font-medium mb-3">{model.age} • {model.type}</p>
+                  <div className="flex gap-2 pt-3 border-t border-pink-600/20">
+                    <span className="text-xs bg-pink-600/20 text-pink-400 px-2 py-1 rounded">Incall</span>
+                    <span className="text-xs bg-purple-600/20 text-purple-400 px-2 py-1 rounded">Outcall</span>
+                  </div>
                 </div>
               </div>
             ))}
@@ -147,71 +152,105 @@ export default async function LocationPage(props: { params: Params }) {
       </section>
 
       {/* Service Details */}
-      <section className="py-16 px-4">
-        <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div className="bg-gray-900 border border-pink-600/20 rounded-lg p-6">
-            <h3 className="font-playfair text-xl text-white mb-4">Incall Service</h3>
-            <p className="text-gray-300 mb-4">
+      <section className="py-16 sm:py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="glass p-8 rounded-2xl border border-pink-600/30">
+            <h3 className="font-playfair text-2xl text-white mb-4 flex items-center gap-3">
+              <span className="text-3xl">🏨</span>
+              Incall Service
+            </h3>
+            <p className="text-gray-300 mb-6">
               Visit our girls at our safe and comfortable locations in {location.name}
             </p>
-            <ul className="space-y-2 text-gray-400 text-sm">
-              <li>✓ Private rooms available</li>
-              <li>✓ AC and comfortable ambiance</li>
-              <li>✓ Discretion guaranteed</li>
-              <li>✓ Refreshments available</li>
+            <ul className="space-y-3">
+              <li className="flex items-center gap-3 text-gray-300">
+                <span className="text-pink-500">✓</span>
+                Private rooms available
+              </li>
+              <li className="flex items-center gap-3 text-gray-300">
+                <span className="text-pink-500">✓</span>
+                AC and comfortable ambiance
+              </li>
+              <li className="flex items-center gap-3 text-gray-300">
+                <span className="text-pink-500">✓</span>
+                Discretion guaranteed
+              </li>
+              <li className="flex items-center gap-3 text-gray-300">
+                <span className="text-pink-500">✓</span>
+                Refreshments available
+              </li>
             </ul>
           </div>
-          <div className="bg-gray-900 border border-pink-600/20 rounded-lg p-6">
-            <h3 className="font-playfair text-xl text-white mb-4">Outcall Service</h3>
-            <p className="text-gray-300 mb-4">
+          <div className="glass p-8 rounded-2xl border border-purple-600/30">
+            <h3 className="font-playfair text-2xl text-white mb-4 flex items-center gap-3">
+              <span className="text-3xl">🚗</span>
+              Outcall Service
+            </h3>
+            <p className="text-gray-300 mb-6">
               Our escorts deliver to your hotel or residence in {location.name}
             </p>
-            <ul className="space-y-2 text-gray-400 text-sm">
-              <li>✓ Delivered within 30-45 minutes</li>
-              <li>✓ All hotels covered</li>
-              <li>✓ Discreet delivery</li>
-              <li>✓ Safe and professional</li>
+            <ul className="space-y-3">
+              <li className="flex items-center gap-3 text-gray-300">
+                <span className="text-purple-500">✓</span>
+                Delivered within 30-45 minutes
+              </li>
+              <li className="flex items-center gap-3 text-gray-300">
+                <span className="text-purple-500">✓</span>
+                All hotels covered
+              </li>
+              <li className="flex items-center gap-3 text-gray-300">
+                <span className="text-purple-500">✓</span>
+                Discreet delivery
+              </li>
+              <li className="flex items-center gap-3 text-gray-300">
+                <span className="text-purple-500">✓</span>
+                Safe and professional
+              </li>
             </ul>
           </div>
         </div>
       </section>
 
       {/* Why Choose Section */}
-      <section className="py-16 px-4 bg-gray-900/50">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="font-playfair text-3xl text-white mb-8">Why Choose Our Escorts In {location.name}</h2>
+      <section className="py-16 sm:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-pink-600/5 to-purple-600/5 border-y border-pink-600/20">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="font-playfair text-4xl font-bold text-white mb-12 text-center">
+            Why Choose Us In {location.name}
+          </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="bg-gray-900 border border-pink-600/20 rounded-lg p-6">
-              <div className="text-4xl mb-3">✓</div>
-              <h3 className="text-white font-semibold mb-2">100% Verified</h3>
-              <p className="text-gray-400 text-sm">All girls are genuinely verified. What you see is what you get!</p>
+            <div className="glass p-8 rounded-2xl border border-pink-600/30 text-center">
+              <div className="text-5xl mb-4">✅</div>
+              <h3 className="text-white font-bold text-xl mb-3">100% Verified</h3>
+              <p className="text-gray-400">All girls are genuinely verified. What you see is what you get!</p>
             </div>
-            <div className="bg-gray-900 border border-pink-600/20 rounded-lg p-6">
-              <div className="text-4xl mb-3">🔒</div>
-              <h3 className="text-white font-semibold mb-2">100% Confidential</h3>
-              <p className="text-gray-400 text-sm">Your privacy is our priority. Complete discretion guaranteed.</p>
+            <div className="glass p-8 rounded-2xl border border-purple-600/30 text-center">
+              <div className="text-5xl mb-4">🔒</div>
+              <h3 className="text-white font-bold text-xl mb-3">100% Confidential</h3>
+              <p className="text-gray-400">Your privacy is our priority. Complete discretion guaranteed.</p>
             </div>
-            <div className="bg-gray-900 border border-pink-600/20 rounded-lg p-6">
-              <div className="text-4xl mb-3">⏱️</div>
-              <h3 className="text-white font-semibold mb-2">24/7 Available</h3>
-              <p className="text-gray-400 text-sm">Book anytime - our services are available round the clock.</p>
+            <div className="glass p-8 rounded-2xl border border-pink-600/30 text-center">
+              <div className="text-5xl mb-4">⏰</div>
+              <h3 className="text-white font-bold text-xl mb-3">24/7 Available</h3>
+              <p className="text-gray-400">Book anytime - our services are available round the clock.</p>
             </div>
           </div>
         </div>
       </section>
 
       {/* CTA */}
-      <section className="py-16 px-4">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="font-playfair text-3xl text-white mb-4">Ready to Book in {location.name}?</h2>
-          <p className="text-gray-400 mb-6">Contact us now to reserve your preferred escort</p>
+      <section className="py-16 sm:py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-2xl mx-auto text-center">
+          <h2 className="font-playfair text-3xl sm:text-4xl font-bold text-white mb-4">
+            Ready to Book in {location.name}?
+          </h2>
+          <p className="text-gray-300 mb-8">Contact us now to reserve your preferred escort 24/7</p>
           <a
             href={`https://wa.me/919229604907?text=Hi%2C%20I%20want%20to%20book%20an%20escort%20in%20${location.name}%2C%20Patna`}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block bg-gradient-to-r from-pink-600 to-purple-600 text-white px-8 py-3 rounded-full font-semibold transition hover:shadow-lg"
+            className="inline-block btn-gradient text-white px-8 py-4 rounded-full font-bold"
           >
-            Book Now
+            💬 Book on WhatsApp
           </a>
         </div>
       </section>

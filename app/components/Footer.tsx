@@ -24,7 +24,7 @@ export default function Footer() {
       {/* Back to Top Button */}
       <button
         onClick={scrollToTop}
-        className={`fixed bottom-6 right-6 z-40 w-12 h-12 bg-gradient-to-br from-pink-600 to-purple-600 text-white rounded-full shadow-lg transition-all duration-300 flex items-center justify-center text-xl ${
+        className={`fixed bottom-8 right-8 z-40 w-14 h-14 bg-gradient-to-br from-pink-600 to-purple-600 text-white rounded-full shadow-2xl transition-all duration-300 flex items-center justify-center text-2xl font-bold hover:scale-110 ${
           isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-0 pointer-events-none'
         }`}
         aria-label="Back to top"
@@ -33,126 +33,127 @@ export default function Footer() {
       </button>
 
       {/* Footer */}
-      <footer className="bg-gray-950 border-t border-pink-500/10 py-12">
-        <div className="max-w-7xl mx-auto px-4">
+      <footer className="bg-gradient-to-b from-slate-900 via-purple-900/20 to-slate-950 border-t border-pink-500/10 pt-16 pb-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Top Section */}
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
             {/* Company Info */}
-            <div>
-              <h3 className="text-white font-bold text-lg mb-4">Escorts In Patna</h3>
-              <p className="text-gray-400 text-sm">
-                Premium verified escort service agency in Patna offering high profile models,
-                incall and outcall services 24/7 across 50+ locations.
+            <div className="space-y-4">
+              <div className="flex items-center gap-2">
+                <div className="w-10 h-10 rounded-full bg-gradient-to-br from-pink-500 to-purple-600 flex items-center justify-center">
+                  <span className="text-lg font-bold text-white">H</span>
+                </div>
+                <h3 className="text-white font-bold text-lg">Hotsonia</h3>
+              </div>
+              <p className="text-gray-400 text-sm leading-relaxed">
+                Premium verified escort service in Patna. 100+ models, 24/7 availability, incall & outcall service across 50+ locations.
               </p>
+              <div className="flex gap-3">
+                <a href="https://wa.me/919229604907" target="_blank" rel="noopener noreferrer" 
+                   className="w-10 h-10 rounded-full bg-green-600/20 hover:bg-green-600/40 flex items-center justify-center text-green-500 transition">
+                  📱
+                </a>
+                <a href="tel:919229604907" 
+                   className="w-10 h-10 rounded-full bg-pink-600/20 hover:bg-pink-600/40 flex items-center justify-center text-pink-500 transition">
+                  ☎️
+                </a>
+              </div>
             </div>
 
             {/* Quick Links */}
             <div>
-              <h4 className="text-white font-semibold mb-4">Quick Links</h4>
-              <ul className="space-y-2 text-sm">
-                <li>
-                  <Link href="/" className="text-gray-400 hover:text-pink-500 transition">
-                    Home
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/gallery" className="text-gray-400 hover:text-pink-500 transition">
-                    Gallery
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/prices" className="text-gray-400 hover:text-pink-500 transition">
-                    Prices
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/contact" className="text-gray-400 hover:text-pink-500 transition">
-                    Contact
-                  </Link>
-                </li>
+              <h4 className="text-white font-bold mb-5 flex items-center gap-2">
+                <span className="w-1 h-6 bg-gradient-to-b from-pink-500 to-purple-500 rounded-full" />
+                Quick Links
+              </h4>
+              <ul className="space-y-3 text-sm">
+                {[
+                  { href: '/', label: 'Home' },
+                  { href: '/gallery', label: 'Model Gallery' },
+                  { href: '/prices', label: 'Pricing' },
+                  { href: '/contact', label: 'Contact' },
+                ].map((link) => (
+                  <li key={link.href}>
+                    <Link href={link.href} className="text-gray-400 hover:text-pink-500 transition-colors font-medium">
+                      → {link.label}
+                    </Link>
+                  </li>
+                ))}
               </ul>
             </div>
 
-            {/* Locations */}
+            {/* Popular Locations */}
             <div>
-              <h4 className="text-white font-semibold mb-4">Popular Locations</h4>
-              <ul className="space-y-2 text-sm">
-                <li>
-                  <Link
-                    href="/locations/boring-road"
-                    className="text-gray-400 hover:text-pink-500 transition"
-                  >
-                    Boring Road
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/locations/bailey-road"
-                    className="text-gray-400 hover:text-pink-500 transition"
-                  >
-                    Bailey Road
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/locations/kankarbagh"
-                    className="text-gray-400 hover:text-pink-500 transition"
-                  >
-                    Kankarbagh
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/links" className="text-gray-400 hover:text-pink-500 transition">
-                    All Locations
-                  </Link>
-                </li>
+              <h4 className="text-white font-bold mb-5 flex items-center gap-2">
+                <span className="w-1 h-6 bg-gradient-to-b from-pink-500 to-purple-500 rounded-full" />
+                Top Locations
+              </h4>
+              <ul className="space-y-3 text-sm">
+                {[
+                  { href: '/locations/boring-road', label: 'Boring Road' },
+                  { href: '/locations/bailey-road', label: 'Bailey Road' },
+                  { href: '/locations/kankarbagh', label: 'Kankarbagh' },
+                  { href: '/locations/fraser-road', label: 'Fraser Road' },
+                ].map((link) => (
+                  <li key={link.href}>
+                    <Link href={link.href} className="text-gray-400 hover:text-pink-500 transition-colors font-medium">
+                      📍 {link.label}
+                    </Link>
+                  </li>
+                ))}
               </ul>
             </div>
 
-            {/* Contact */}
+            {/* Newsletter */}
             <div>
-              <h4 className="text-white font-semibold mb-4">Contact Us</h4>
-              <div className="space-y-3 text-sm">
-                <p className="text-gray-400">
-                  📞 24/7 Available
-                </p>
-                <a
-                  href="https://wa.me/919229604907"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-block bg-pink-600 hover:bg-pink-700 text-white px-4 py-2 rounded-lg font-semibold transition"
+              <h4 className="text-white font-bold mb-5 flex items-center gap-2">
+                <span className="w-1 h-6 bg-gradient-to-b from-pink-500 to-purple-500 rounded-full" />
+                Get Updates
+              </h4>
+              <p className="text-gray-400 text-sm mb-4">Subscribe to get latest models & offers</p>
+              <form className="space-y-2" onSubmit={(e) => e.preventDefault()}>
+                <input 
+                  type="email" 
+                  placeholder="Your email"
+                  className="w-full bg-slate-800/50 border border-pink-500/30 rounded-lg px-3 py-2 text-sm text-white placeholder-gray-500 focus:border-pink-500 focus:outline-none transition"
+                />
+                <button
+                  type="submit"
+                  className="w-full bg-gradient-to-r from-pink-600 to-purple-600 hover:from-pink-700 hover:to-purple-700 text-white rounded-lg py-2 font-medium text-sm transition transform hover:scale-105"
                 >
-                  WhatsApp Us
-                </a>
-              </div>
+                  Subscribe
+                </button>
+              </form>
             </div>
           </div>
 
-          {/* Divider */}
-          <div className="border-t border-pink-500/10 my-8"></div>
+          {/* Features */}
+          <div className="grid grid-cols-3 sm:grid-cols-6 gap-4 mb-12 pb-12 border-b border-pink-500/10">
+            {[
+              { icon: '✓', label: '100% Verified' },
+              { icon: '🔒', label: 'Discreet' },
+              { icon: '⏰', label: '24/7' },
+              { icon: '🎁', label: 'Best Rates' },
+              { icon: '🗺️', label: '50+ Areas' },
+              { icon: '🌟', label: 'Premium' },
+            ].map((item, i) => (
+              <div key={i} className="text-center group cursor-pointer">
+                <div className="text-2xl mb-2 group-hover:scale-125 transition-transform">{item.icon}</div>
+                <p className="text-gray-400 text-xs font-medium group-hover:text-pink-500 transition-colors">{item.label}</p>
+              </div>
+            ))}
+          </div>
 
           {/* Bottom Section */}
-          <div className="flex flex-col md:flex-row items-center justify-between text-sm text-gray-400">
-            <div>
-              © 2026 Escorts In Patna. All rights reserved. | 18+ Only
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-6 pt-8 border-t border-pink-500/10">
+            <p className="text-gray-500 text-sm text-center sm:text-left">
+              © 2026 Hotsonia. All rights reserved. | Premium Escort Service in Patna
+            </p>
+            <div className="flex gap-6 text-sm">
+              <a href="#" className="text-gray-400 hover:text-pink-500 transition">Privacy</a>
+              <a href="#" className="text-gray-400 hover:text-pink-500 transition">Terms</a>
+              <a href="#" className="text-gray-400 hover:text-pink-500 transition">Disclaimer</a>
             </div>
-            <div className="flex gap-6 mt-4 md:mt-0">
-              <Link href="#" className="hover:text-pink-500 transition">
-                Privacy Policy
-              </Link>
-              <Link href="#" className="hover:text-pink-500 transition">
-                Terms & Conditions
-              </Link>
-              <Link href="#" className="hover:text-pink-500 transition">
-                Disclaimer
-              </Link>
-            </div>
-          </div>
-
-          {/* Age Warning */}
-          <div className="mt-6 p-4 bg-gray-900/50 border border-pink-500/20 rounded-lg text-center text-xs text-gray-400">
-            By accessing this site, you declare that you are 18 or older. This website is for adult
-            entertainment only. We take your privacy seriously.
           </div>
         </div>
       </footer>

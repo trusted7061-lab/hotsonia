@@ -19,115 +19,77 @@ export default function Navbar() {
 
   return (
     <>
-      {/* Top Bar */}
-      <div className="bg-gray-900 border-b border-pink-500/10 py-2">
-        <div className="max-w-7xl mx-auto px-4 flex items-center justify-between text-sm text-gray-300">
-          <span>📞 24/7 Available | Incalls & Outcalls Services</span>
-          <a
-            href="https://wa.me/919229604907"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-pink-600 hover:bg-pink-700 text-white px-4 py-1 rounded-md font-semibold transition"
-          >
-            BOOKING OPEN
-          </a>
-        </div>
-      </div>
-
       {/* Main Navbar */}
       <nav
         className={`sticky top-0 z-50 transition-all duration-300 ${
-          isScrolled ? 'bg-gray-900/95 backdrop-blur shadow-lg' : 'bg-transparent'
+          isScrolled 
+            ? 'bg-gradient-to-r from-slate-900 via-purple-900/50 to-slate-900 backdrop-blur-lg shadow-xl' 
+            : 'bg-gradient-to-r from-slate-900/80 via-purple-900/30 to-slate-900/80 backdrop-blur-md'
         }`}
       >
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="flex items-center justify-between h-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center justify-between h-20">
             {/* Logo */}
-            <Link href="/" className="flex items-center">
-              <div className="w-10 h-10 relative">
-                <Image
-                  src="/images/logo.png"
-                  alt="Escorts Patna"
-                  fill
-                  className="object-contain"
-                />
+            <Link href="/" className="flex items-center group">
+              <div className="w-12 h-12 relative rounded-full bg-gradient-to-br from-pink-500 to-purple-600 p-0.5">
+                <div className="w-full h-full rounded-full bg-slate-900 flex items-center justify-center">
+                  <span className="text-lg font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-purple-500">H</span>
+                </div>
               </div>
+              <span className="ml-3 hidden sm:block text-lg font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-purple-500 to-pink-500 whitespace-nowrap">
+                Hotsonia
+              </span>
             </Link>
 
             {/* Desktop Nav Links */}
-            <ul className="hidden md:flex items-center gap-8">
-              <li>
-                <Link
-                  href="/"
-                  className="text-gray-300 hover:text-pink-500 font-medium transition"
-                >
-                  Home
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/gallery"
-                  className="text-gray-300 hover:text-pink-500 font-medium transition"
-                >
-                  Gallery
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/prices"
-                  className="text-gray-300 hover:text-pink-500 font-medium transition"
-                >
-                  Prices
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/contact"
-                  className="text-gray-300 hover:text-pink-500 font-medium transition"
-                >
-                  Contact
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/links"
-                  className="text-gray-300 hover:text-pink-500 font-medium transition"
-                >
-                  Links
-                </Link>
-              </li>
+            <ul className="hidden lg:flex items-center gap-1">
+              {[
+                { href: '/', label: 'Home' },
+                { href: '/gallery', label: 'Gallery' },
+                { href: '/prices', label: 'Pricing' },
+                { href: '/contact', label: 'Contact' },
+                { href: '/links', label: 'Links' },
+              ].map((link) => (
+                <li key={link.href}>
+                  <Link
+                    href={link.href}
+                    className="relative px-4 py-2 text-gray-200 hover:text-white font-medium transition-all duration-300 group"
+                  >
+                    {link.label}
+                    <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-pink-500 to-purple-500 group-hover:w-full transition-all duration-300" />
+                  </Link>
+                </li>
+              ))}
             </ul>
 
-            {/* Desktop CTA Button */}
+            {/* CTA Button */}
             <a
               href="https://wa.me/919229604907?text=Hi%2C%20I%20want%20to%20book%20an%20escort%20in%20Patna"
               target="_blank"
               rel="noopener noreferrer"
-              className="hidden md:block bg-gradient-to-r from-pink-600 to-purple-600 hover:from-pink-700 hover:to-purple-700 text-white px-6 py-2 rounded-full font-semibold transition transform hover:scale-105"
+              className="hidden sm:block bg-gradient-to-r from-pink-600 to-purple-600 hover:from-pink-700 hover:to-purple-700 text-white px-5 py-2.5 rounded-full font-semibold text-sm transition transform hover:scale-105 shadow-lg hover:shadow-pink-500/50"
             >
-              Book Now
+              📞 Book Now
             </a>
 
             {/* Mobile Menu Button */}
             <button
-              className={`md:hidden flex flex-col gap-1.5 w-8 transition ${
-                isMobileNavOpen ? 'gap-0' : ''
-              }`}
+              className="lg:hidden flex flex-col gap-1.5 w-8 h-8 items-center justify-center"
               onClick={() => setIsMobileNavOpen(!isMobileNavOpen)}
               aria-label="Toggle navigation"
             >
               <span
-                className={`w-6 h-0.5 bg-white transition-all ${
+                className={`w-6 h-0.5 bg-gradient-to-r from-pink-500 to-purple-500 transition-all duration-300 ${
                   isMobileNavOpen ? 'rotate-45 translate-y-2' : ''
                 }`}
               />
               <span
-                className={`w-6 h-0.5 bg-white transition-opacity ${
+                className={`w-6 h-0.5 bg-gradient-to-r from-pink-500 to-purple-500 transition-opacity duration-300 ${
                   isMobileNavOpen ? 'opacity-0' : ''
                 }`}
               />
               <span
-                className={`w-6 h-0.5 bg-white transition-all ${
+                className={`w-6 h-0.5 bg-gradient-to-r from-pink-500 to-purple-500 transition-all duration-300 ${
                   isMobileNavOpen ? '-rotate-45 -translate-y-2' : ''
                 }`}
               />
@@ -136,53 +98,25 @@ export default function Navbar() {
 
           {/* Mobile Menu */}
           {isMobileNavOpen && (
-            <div className="md:hidden pb-4 border-t border-pink-500/10">
-              <ul className="flex flex-col gap-4 pt-4">
-                <li>
-                  <Link
-                    href="/"
-                    className="text-gray-300 hover:text-pink-500 block font-medium transition"
-                    onClick={() => setIsMobileNavOpen(false)}
-                  >
-                    Home
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/gallery"
-                    className="text-gray-300 hover:text-pink-500 block font-medium transition"
-                    onClick={() => setIsMobileNavOpen(false)}
-                  >
-                    Gallery
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/prices"
-                    className="text-gray-300 hover:text-pink-500 block font-medium transition"
-                    onClick={() => setIsMobileNavOpen(false)}
-                  >
-                    Prices
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/contact"
-                    className="text-gray-300 hover:text-pink-500 block font-medium transition"
-                    onClick={() => setIsMobileNavOpen(false)}
-                  >
-                    Contact
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/links"
-                    className="text-gray-300 hover:text-pink-500 block font-medium transition"
-                    onClick={() => setIsMobileNavOpen(false)}
-                  >
-                    Links
-                  </Link>
-                </li>
+            <div className="lg:hidden pb-6 border-t border-pink-500/20 mt-4 animate-in slide-in-from-top-2">
+              <ul className="flex flex-col gap-3 pt-6">
+                {[
+                  { href: '/', label: 'Home' },
+                  { href: '/gallery', label: 'Gallery' },
+                  { href: '/prices', label: 'Pricing' },
+                  { href: '/contact', label: 'Contact' },
+                  { href: '/links', label: 'Links' },
+                ].map((link) => (
+                  <li key={link.href}>
+                    <Link
+                      href={link.href}
+                      className="text-gray-200 hover:text-pink-500 block font-medium transition-colors py-2 px-4 rounded-lg hover:bg-pink-600/10"
+                      onClick={() => setIsMobileNavOpen(false)}
+                    >
+                      {link.label}
+                    </Link>
+                  </li>
+                ))}
               </ul>
               <a
                 href="https://wa.me/919229604907?text=Hi%2C%20I%20want%20to%20book%20an%20escort%20in%20Patna"

@@ -21,162 +21,193 @@ export const metadata: Metadata = {
 
 export default function Home() {
   const models = [
-    { name: 'Aafrin', age: 24, type: 'Premium Model', image: '/images/aafrin.webp', badge: 'VERIFIED' },
-    { name: 'Anaya', age: 22, type: 'High Class Escort', image: '/images/anaya.webp', badge: 'VIP' },
-    { name: 'Diya', age: 21, type: 'College Girl', image: '/images/diya.webp', badge: 'VERIFIED' },
-    { name: 'Jamila', age: 26, type: 'Independent Escort', image: '/images/jamila.webp', badge: 'VIP' },
-    { name: 'Janu', age: 23, type: 'Model Escort', image: '/images/janu.webp', badge: 'VERIFIED' },
-    { name: 'Natasha', age: 25, type: 'Russian Model', image: '/images/natasha.webp', badge: 'VIP' },
+    { name: 'Aafrin', age: 24, type: 'Premium Model', image: '/images/aafrin.webp', price: '₹12K/hr' },
+    { name: 'Anaya', age: 22, type: 'High Class', image: '/images/anaya.webp', price: '₹10K/hr' },
+    { name: 'Diya', age: 21, type: 'College Girl', image: '/images/diya.webp', price: '₹9K/hr' },
+    { name: 'Jamila', age: 26, type: 'Independent', image: '/images/jamila.webp', price: '₹11K/hr' },
+    { name: 'Janu', age: 23, type: 'Model Escort', image: '/images/janu.webp', price: '₹10.5K/hr' },
+    { name: 'Natasha', age: 25, type: 'Russian Model', image: '/images/natasha.webp', price: '₹15K/hr' },
+  ];
+
+  const features = [
+    { icon: '💯', title: '100% Verified', desc: 'All models verified & authenticated' },
+    { icon: '🔒', title: 'Confidential', desc: 'Complete privacy & discretion' },
+    { icon: '⏰', title: '24/7 Service', desc: 'Available round the clock' },
+    { icon: '💰', title: 'Best Rates', desc: 'Starting from ₹9,000/hour' },
+    { icon: '🗺️', title: '50+ Areas', desc: 'All Patna locations covered' },
+    { icon: '⭐', title: 'Premium', desc: 'High-class companions' },
   ];
 
   const faqs = [
     {
-      q: 'What is the cost of escorts in Patna?',
-      a: 'The cost of escorts in Patna starts from ₹9,000 for a 1-hour session and goes up to ₹50,000 for premium VIP models. Prices depend on the type of escort, duration, and service type.',
-    },
-    {
-      q: 'Do you have verified call girls in Patna?',
-      a: 'Yes, we verify every escort who provides our services. All profiles are authentic with 100% genuine photos. Every model undergoes identity verification and regular health checkups.',
-    },
-    {
       q: 'What is the minimum booking duration?',
-      a: 'The minimum booking duration is 1 hour. However, there is no maximum limit. We also offer half-day (4 hours) and full-night packages for extended experiences.',
+      a: 'The minimum booking duration is 1 hour. We also offer 2-hour, 4-hour (half day), and 8-hour (full night) packages at special rates.',
     },
     {
-      q: 'When can I book a call girl in Patna?',
-      a: 'You can book escorts in Patna any time – our services are available 24 hours a day, 7 days a week, 365 days a year.',
+      q: 'Do you provide both incall and outcall?',
+      a: 'Yes! For incall, visit our safe location. For outcall, our escort will come to your hotel or residence within 30-45 minutes across all Patna areas.',
     },
     {
-      q: 'Do you provide both incall and outcall services?',
-      a: 'Yes, we offer both incall and outcall escort services in Patna. For incall, you visit the model at a designated location. For outcall, the model comes to your hotel room or residence within 30-45 minutes.',
+      q: 'How to book an escort?',
+      a: 'Simply message us on WhatsApp with your preferences. Share location, date, time, and duration. We will confirm availability and complete your booking.',
     },
     {
-      q: 'Is my privacy protected when booking?',
-      a: 'Absolutely. We maintain 100% confidentiality and discretion. Your personal information is never shared. All bookings are handled privately with complete privacy.',
+      q: 'Are models real and verified?',
+      a: 'Absolutely! 100% genuine models with verified documents. All photos are real and recent. Every model undergoes health checkups.',
     },
   ];
 
   return (
-    <div>
+    <div className="w-full">
       {/* Hero Section */}
-      <section className="relative h-screen flex items-center justify-center overflow-hidden">
-        <Image
-          src="/images/banner.webp"
-          alt="Escorts In Patna - Premium Call Girls Service"
-          fill
-          className="object-cover brightness-50"
-          priority
-        />
-        <div className="relative z-10 text-center max-w-4xl mx-auto px-4">
-          <div className="inline-block bg-pink-600/20 border border-pink-600/50 rounded-full px-4 py-2 mb-6">
-            <span className="text-pink-500 font-semibold">✦ WELCOME TO PATNA'S #1 ESCORT SERVICE</span>
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+        {/* Background with gradient overlay */}
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/images/banner.webp"
+            alt="Hotsonia Escorts"
+            fill
+            className="object-cover"
+            priority
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-slate-900/90 via-purple-900/60 to-slate-900/90" />
+        </div>
+
+        {/* Content */}
+        <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center py-20 sm:py-32">
+          {/* Badge */}
+          <div className="inline-flex items-center gap-2 bg-pink-500/20 border border-pink-500/50 rounded-full px-4 py-2 mb-6 fade-in">
+            <span className="w-2 h-2 rounded-full bg-pink-500 animate-pulse" />
+            <span className="text-pink-400 font-medium text-sm">Patna's #1 Escort Platform</span>
           </div>
-          <h1 className="font-playfair text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-            Escorts In Patna | <span className="text-pink-500">Call Girls In Patna</span>
+
+          {/* Main Heading */}
+          <h1 className="font-playfair text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-4 sm:mb-6 leading-tight slide-in-left">
+            Meet Premium
+            <br />
+            <span className="gradient-text">Escorts in Patna</span>
           </h1>
-          <p className="text-lg md:text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-            Book verified <strong>escorts in Patna</strong> for incall & outcall services at hotels &
-            residences. High profile models available 24/7 starting <strong>₹9,000</strong>.
+
+          {/* Subtitle */}
+          <p className="text-gray-200 text-lg sm:text-xl md:text-2xl mb-8 max-w-2xl mx-auto leading-relaxed slide-in-right">
+            Book 100% verified call girls • Incall & Outcall • 50+ locations • Starting ₹9,000
           </p>
-          <div className="space-y-4 mb-8">
-            <div className="text-gray-300">
-              <span className="text-pink-500 font-bold mr-2">✔</span>Patna Escorts 100% Satisfaction
-            </div>
-            <div className="text-gray-300">
-              <span className="text-pink-500 font-bold mr-2">✔</span>Awesome Escort Services
-            </div>
-            <div className="text-gray-300">
-              <span className="text-pink-500 font-bold mr-2">✔</span>Incalls & Outcalls Services
-            </div>
-            <div className="text-gray-300">
-              <span className="text-pink-500 font-bold mr-2">✔</span>100% Discreet High Profile Companionship
-            </div>
-          </div>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+
+          {/* CTA Buttons */}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8 scale-in">
             <a
-              href="https://wa.me/919229604907"
+              href="https://wa.me/919229604907?text=Hi%2C%20I%20want%20to%20book%20an%20escort%20in%20Patna"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-gradient-to-r from-pink-600 to-purple-600 hover:from-pink-700 hover:to-purple-700 text-white px-8 py-3 rounded-full font-semibold transition transform hover:scale-105"
+              className="btn-gradient text-white px-8 py-4 rounded-full font-bold text-lg shadow-lg inline-flex items-center justify-center gap-2"
             >
-              BOOKING OPEN
+              📱 Book on WhatsApp
             </a>
             <Link
               href="/gallery"
-              className="border-2 border-white hover:bg-white hover:text-gray-950 text-white px-8 py-3 rounded-full font-semibold transition"
+              className="bg-white/10 hover:bg-white/20 text-white px-8 py-4 rounded-full font-bold text-lg border-2 border-white transition-all"
             >
-              View Gallery
+              👀 View Gallery
             </Link>
           </div>
-          <p className="text-gray-400 mt-8 text-sm">
-            Luxurious High Class Escorts Models Online | Patna, Bihar
-          </p>
-        </div>
-      </section>
 
-      {/* About Section */}
-      <section className="py-20 px-4 bg-gray-900/50">
-        <div className="max-w-4xl mx-auto">
-          <div className="bg-gradient-to-br from-gray-900 to-gray-950 border border-pink-600/25 border-l-4 border-l-pink-600 rounded-xl p-8 md:p-12">
-            <h2 className="font-playfair text-3xl md:text-4xl text-white mb-6">
-              What Are <span className="text-pink-500">Escorts In Patna</span>?
-            </h2>
-            <p className="text-gray-300 text-lg leading-relaxed">
-              <strong>Escorts in Patna</strong> are verified, high-profile female companions available
-              for incall and outcall services across the city. Our Patna escort agency provides{' '}
-              <strong>100% genuine models</strong> including college girls, air hostesses, Russian
-              models, housewives, and VIP celebrities — all available for booking{' '}
-              <strong>24 hours a day, 7 days a week</strong>. Prices start from{' '}
-              <strong>₹9,000 per hour</strong> with services covering <strong>50+ locations</strong> in
-              Patna. Whether you need a companion for a dinner date, party, or private meeting, our{' '}
-              <strong>Patna call girls</strong> deliver premium, discreet service with 100% satisfaction
-              guaranteed.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Gallery Preview */}
-      <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <div className="inline-block bg-pink-600/20 border border-pink-600/50 rounded-full px-4 py-2 mb-6">
-              <span className="text-pink-500 font-semibold text-sm">✦ OUR COLLECTION</span>
+          {/* Stats */}
+          <div className="grid grid-cols-3 gap-4 max-w-md mx-auto text-center text-sm sm:text-base">
+            <div className="glass p-4 rounded-lg">
+              <div className="text-2xl font-bold text-pink-500">100+</div>
+              <div className="text-gray-300 text-xs sm:text-sm">Models</div>
             </div>
-            <h2 className="font-playfair text-4xl md:text-5xl text-white mb-4">
-              100% Genuine <span className="text-pink-500">Escorts In Patna</span> – Model Gallery
+            <div className="glass p-4 rounded-lg">
+              <div className="text-2xl font-bold text-pink-500">50+</div>
+              <div className="text-gray-300 text-xs sm:text-sm">Locations</div>
+            </div>
+            <div className="glass p-4 rounded-lg">
+              <div className="text-2xl font-bold text-pink-500">24/7</div>
+              <div className="text-gray-300 text-xs sm:text-sm">Available</div>
+            </div>
+          </div>
+        </div>
+
+        {/* Scroll indicator */}
+        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10 animate-bounce">
+          <div className="w-6 h-10 border-2 border-pink-500 rounded-full flex items-center justify-center">
+            <div className="w-1 h-2 bg-pink-500 rounded-full animate-pulse" />
+          </div>
+        </div>
+      </section>
+
+      {/* Features Section */}
+      <section className="py-16 sm:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-slate-900 to-slate-950/50">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {features.map((feature, i) => (
+              <div
+                key={i}
+                className="glass glass-hover p-6 rounded-2xl text-center group hover:scale-105 transition-transform cursor-pointer"
+              >
+                <div className="text-5xl mb-4 group-hover:scale-125 transition-transform">{feature.icon}</div>
+                <h3 className="text-white font-bold text-lg mb-2">{feature.title}</h3>
+                <p className="text-gray-400 text-sm">{feature.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Models Section */}
+      <section className="py-16 sm:py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto">
+          {/* Section Header */}
+          <div className="text-center mb-12">
+            <h2 className="font-playfair text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4">
+              Featured
+              <br />
+              <span className="gradient-text">Escorts</span>
             </h2>
+            <p className="text-gray-300 text-base sm:text-lg">Choose from our premium collection of verified models</p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+          {/* Models Grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             {models.map((model) => (
-              <div
-                key={model.name}
-                className="group rounded-xl overflow-hidden bg-gray-900 border border-pink-600/20 hover:border-pink-600/50 transition transform hover:-translate-y-2"
-              >
-                <div className="relative h-80 overflow-hidden">
+              <div key={model.name} className="group">
+                <div className="relative h-96 sm:h-[450px] rounded-2xl overflow-hidden mb-4 card-hover">
                   <Image
                     src={model.image}
-                    alt={`${model.name} - ${model.type} Escort in Patna`}
+                    alt={model.name}
                     fill
-                    className="object-cover group-hover:scale-110 transition duration-300"
+                    className="object-cover group-hover:scale-110 transition-transform duration-300"
                   />
-                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition" />
-                  <span className="absolute top-4 right-4 bg-pink-600 text-white text-xs font-bold px-3 py-1 rounded-full">
-                    {model.badge}
-                  </span>
-                  <div className="absolute top-4 right-4 mr-20 text-3xl">👑</div>
+                  {/* Overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                    <div className="w-full p-6">
+                      <div className="flex justify-between items-end">
+                        <div>
+                          <h3 className="text-white font-bold text-xl">{model.name}</h3>
+                          <p className="text-gray-200 text-sm">{model.age} years • {model.type}</p>
+                        </div>
+                        <span className="bg-pink-600 text-white px-3 py-1 rounded-full text-sm font-bold">✓ Verified</span>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <div className="p-6">
-                  <h3 className="font-semibold text-lg text-white mb-1">
-                    {model.name} <span className="text-gray-400 text-sm">Age: {model.age}</span>
-                  </h3>
-                  <p className="text-gray-400 text-sm mb-4">{model.type}</p>
+
+                {/* Info Card */}
+                <div className="glass p-4 rounded-xl">
+                  <div className="flex justify-between items-center mb-3">
+                    <div>
+                      <p className="text-white font-bold text-lg">{model.name}</p>
+                      <p className="text-gray-400 text-sm">{model.type}</p>
+                    </div>
+                    <div className="text-right">
+                      <p className="text-pink-500 font-bold text-lg">{model.price}</p>
+                    </div>
+                  </div>
                   <a
                     href="https://wa.me/919229604907?text=Hi%2C%20I%20want%20to%20book%20an%20escort%20in%20Patna"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-block border border-pink-600 text-pink-500 hover:bg-pink-600 hover:text-white px-4 py-2 rounded-full text-sm font-semibold transition"
+                    className="w-full bg-gradient-to-r from-pink-600 to-purple-600 hover:from-pink-700 hover:to-purple-700 text-white py-2 rounded-lg font-bold text-center transition-all"
                   >
                     Book Now
                   </a>
@@ -185,58 +216,86 @@ export default function Home() {
             ))}
           </div>
 
+          {/* View All Button */}
           <div className="text-center mt-12">
             <Link
               href="/gallery"
-              className="inline-block bg-gradient-to-r from-pink-600 to-purple-600 hover:from-pink-700 hover:to-purple-700 text-white px-8 py-3 rounded-full font-semibold transition"
+              className="inline-block btn-gradient text-white px-8 py-4 rounded-full font-bold"
             >
-              View All Models
+              View All Models →
             </Link>
           </div>
         </div>
       </section>
 
-      {/* FAQ Section */}
-      <section className="py-20 px-4 bg-gray-900/50">
+      {/* How It Works */}
+      <section className="py-16 sm:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-slate-900/50 to-slate-900">
         <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="font-playfair text-4xl text-white mb-4">
-              Frequently Asked Questions
-            </h2>
-            <p className="text-gray-400">Everything you need to know about booking escorts in Patna</p>
-          </div>
+          <h2 className="font-playfair text-3xl sm:text-4xl md:text-5xl font-bold text-white text-center mb-12">
+            How to <span className="gradient-text">Book</span>
+          </h2>
 
-          <div className="space-y-6">
-            {faqs.map((faq, index) => (
-              <details
-                key={index}
-                className="group bg-gray-900 border border-pink-600/20 rounded-lg p-6 hover:border-pink-600/50 transition cursor-pointer"
-              >
-                <summary className="font-semibold text-white text-lg flex items-center justify-between">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[
+              { num: '1', icon: '💬', title: 'Contact Us', desc: 'Message on WhatsApp with preferences' },
+              { num: '2', icon: '📋', title: 'Choose Model', desc: 'Select from 100+ verified escorts' },
+              { num: '3', icon: '✅', title: 'Confirm', desc: 'Finalize date, time & location' },
+              { num: '4', icon: '🎉', title: 'Enjoy', desc: 'Premium service & unforgettable time' },
+            ].map((step, i) => (
+              <div key={i} className="relative">
+                <div className="glass p-6 rounded-xl text-center h-full flex flex-col items-center justify-center">
+                  <div className="w-12 h-12 bg-gradient-to-br from-pink-600 to-purple-600 rounded-full flex items-center justify-center text-white font-bold text-xl mb-3">
+                    {step.num}
+                  </div>
+                  <div className="text-3xl mb-3">{step.icon}</div>
+                  <h3 className="text-white font-bold mb-2">{step.title}</h3>
+                  <p className="text-gray-400 text-sm">{step.desc}</p>
+                </div>
+                {i < 3 && <div className="hidden lg:block absolute top-1/2 -right-3 w-6 h-0.5 bg-gradient-to-r from-pink-600 to-purple-600" />}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="py-16 sm:py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-3xl mx-auto">
+          <h2 className="font-playfair text-3xl sm:text-4xl md:text-5xl font-bold text-white text-center mb-4">
+            Frequently Asked <span className="gradient-text">Questions</span>
+          </h2>
+          <p className="text-gray-300 text-center mb-12">Get answers to common booking questions</p>
+
+          <div className="space-y-4">
+            {faqs.map((faq, i) => (
+              <details key={i} className="group glass p-6 rounded-xl cursor-pointer">
+                <summary className="flex justify-between items-center font-bold text-white hover:text-pink-500 transition-colors">
                   {faq.q}
-                  <span className="text-pink-500 group-open:rotate-180 transition">▼</span>
+                  <span className="group-open:rotate-180 transition-transform text-pink-500">▼</span>
                 </summary>
-                <p className="text-gray-400 mt-4 leading-relaxed">{faq.a}</p>
+                <p className="text-gray-300 mt-4 leading-relaxed">{faq.a}</p>
               </details>
             ))}
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="font-playfair text-4xl text-white mb-4">Ready to Book?</h2>
-          <p className="text-gray-300 text-lg mb-8">
-            Contact us 24/7 via WhatsApp to book your preferred escort in Patna
+      {/* Final CTA */}
+      <section className="py-16 sm:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-pink-600/20 via-purple-600/20 to-pink-600/20 border-y border-pink-600/20">
+        <div className="max-w-2xl mx-auto text-center">
+          <h2 className="font-playfair text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4">
+            Ready to Book?
+          </h2>
+          <p className="text-gray-200 text-lg mb-8">
+            Chat with us anytime. Premium escorts waiting for you 24/7
           </p>
           <a
             href="https://wa.me/919229604907"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block bg-gradient-to-r from-pink-600 to-purple-600 hover:from-pink-700 hover:to-purple-700 text-white px-8 py-4 rounded-full font-semibold text-lg transition transform hover:scale-105"
+            className="inline-block btn-gradient text-white px-10 py-4 rounded-full font-bold text-lg shadow-2xl"
           >
-            Start Booking Now
+            💬 Start Booking Now
           </a>
         </div>
       </section>
