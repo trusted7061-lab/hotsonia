@@ -2,52 +2,52 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Services | PatnaEscorts",
-  description: "Explore our full range of premium escort and companion services in Patna.",
+  title: "Services | Hot Sonia — Escorts in Patna",
+  description: "Premium escort services in Patna — in-call, out-call, overnight, travel companion, and more.",
 };
 
 const services = [
   {
-    icon: "💎",
-    title: "Elite Companions",
-    price: "Starting ₹5,000",
-    desc: "Hand-picked, sophisticated companions for dinners, events, and social occasions. Our elite companions are well-educated, charming, and know how to make any moment special.",
-    features: ["Dinner dates", "Social events", "Corporate outings", "Award ceremonies"],
-  },
-  {
     icon: "🌹",
     title: "In-Call Services",
     price: "Starting ₹3,000",
-    desc: "Private, comfortable, and safe in-call facilities available 24/7 across Patna. Our venues are discreet, clean, and designed for your maximum comfort.",
-    features: ["Private venue", "Clean & hygienic", "Fully discreet", "Safe environment"],
+    desc: "Visit our private, luxurious in-call venues available 24/7 across Patna. Clean, hygienic, and exceptionally comfortable.",
+    features: ["Private venue", "Fully hygienic", "Discreet location", "Comfortable setup"],
   },
   {
     icon: "🚗",
     title: "Out-Call Services",
     price: "Starting ₹4,000",
-    desc: "We come to your hotel or residence at your convenience. All our out-call companions are punctual, well-dressed, and discreet.",
+    desc: "We come to your hotel or home at your convenience. Punctual, well-dressed, and completely discreet.",
     features: ["Hotel visits", "Home visits", "Punctual arrival", "Discreet exit"],
   },
   {
     icon: "🌙",
-    title: "Overnight Packages",
+    title: "Overnight Package",
     price: "Starting ₹12,000",
-    desc: "Extended companionship packages for a full night of unforgettable experience. Perfect for those who desire a longer, more intimate connection.",
-    features: ["Full night stay", "Extended companionship", "Breakfast included", "Flexible timing"],
+    desc: "An extended night of warmth and companionship. Perfect for those who want more time to connect.",
+    features: ["Full night stay", "Extended companionship", "Morning available", "Flexible timing"],
   },
   {
     icon: "✈️",
-    title: "Travel Companions",
+    title: "Travel Companion",
     price: "Starting ₹20,000 / day",
-    desc: "Beautiful, cultured companions to accompany you on business or leisure trips. Available for both domestic and international travel.",
-    features: ["Domestic travel", "International travel", "Business trips", "Leisure tours"],
+    desc: "Take a gorgeous, cultured companion on your next trip — domestic or international.",
+    features: ["Domestic trips", "International trips", "Fully discreet", "Weekends available"],
+  },
+  {
+    icon: "💎",
+    title: "Elite Companion",
+    price: "Starting ₹6,000",
+    desc: "Our top-tier companions for corporate dinners, VIP events, and exclusive occasions.",
+    features: ["Event escort", "VIP experience", "Well educated", "Elegantly dressed"],
   },
   {
     icon: "🎉",
-    title: "Event Escort",
-    price: "Starting ₹6,000",
-    desc: "Make any event memorable with a charming, well-dressed companion by your side. Ideal for corporate functions, weddings, and high-profile events.",
-    features: ["Corporate events", "Weddings", "Gala dinners", "Private parties"],
+    title: "Party Companion",
+    price: "Starting ₹5,000",
+    desc: "A lively, fun companion for parties, social gatherings, and private celebrations.",
+    features: ["Private parties", "Social events", "Fun personality", "Available 24/7"],
   },
 ];
 
@@ -55,54 +55,90 @@ export default function ServicesPage() {
   return (
     <>
       {/* Hero */}
-      <section className="pt-32 pb-16 bg-gray-950">
-        <div className="max-w-4xl mx-auto px-4 text-center">
-          <span className="text-rose-500 text-sm uppercase tracking-widest font-semibold">What We Offer</span>
-          <h1 className="text-4xl sm:text-5xl font-bold text-white mt-2 mb-6">Our Premium Services</h1>
-          <p className="text-gray-400 text-lg leading-relaxed">
-            From casual companionship to exclusive overnight packages — we have the perfect service for every occasion.
+      <section
+        className="pt-32 pb-14 text-center"
+        style={{ background: "linear-gradient(180deg, #0a0208 0%, #100009 100%)" }}
+      >
+        <div className="max-w-4xl mx-auto px-4">
+          <p className="text-xs uppercase tracking-[0.28em] font-bold mb-2" style={{ color: "#f5c842" }}>
+            ✦ Premium Offerings ✦
+          </p>
+          <h1
+            className="text-4xl sm:text-5xl font-bold mb-4"
+            style={{ fontFamily: "var(--font-playfair)" }}
+          >
+            <span className="gradient-text">Our Services</span>
+          </h1>
+          <p className="text-sm" style={{ color: "rgba(255,255,255,0.52)" }}>
+            From casual dates to overnight stays — we have the perfect service for every desire.
           </p>
         </div>
       </section>
 
-      {/* Services Grid */}
-      <section className="py-16 bg-gray-900">
+      {/* Cards */}
+      <section className="py-10 pb-24" style={{ background: "#0a0208" }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
-            {services.map((service) => (
-              <div key={service.title} className="bg-gray-800/50 border border-gray-700/50 rounded-2xl p-7 hover:border-rose-700/50 transition-all duration-300 flex flex-col">
-                <div className="text-5xl mb-4">{service.icon}</div>
-                <div className="flex items-center justify-between mb-3">
-                  <h3 className="text-white font-bold text-xl">{service.title}</h3>
-                  <span className="text-rose-400 text-sm font-semibold bg-rose-900/30 px-3 py-1 rounded-full">{service.price}</span>
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-7">
+            {services.map((s) => (
+              <div
+                key={s.title}
+                className="card-glass rounded-2xl p-7 flex flex-col hover:scale-[1.02] transition-transform duration-300"
+              >
+                <div className="text-5xl mb-5">{s.icon}</div>
+                <div className="flex items-start justify-between gap-3 mb-3">
+                  <h3
+                    className="text-white font-bold text-xl"
+                    style={{ fontFamily: "var(--font-playfair)" }}
+                  >
+                    {s.title}
+                  </h3>
+                  <span
+                    className="text-xs font-bold px-3 py-1.5 rounded-full whitespace-nowrap flex-shrink-0"
+                    style={{ background: "rgba(240,24,125,0.18)", color: "#f0187d" }}
+                  >
+                    {s.price}
+                  </span>
                 </div>
-                <p className="text-gray-400 text-sm leading-relaxed mb-5">{service.desc}</p>
-                <ul className="space-y-2 mt-auto">
-                  {service.features.map((feat) => (
-                    <li key={feat} className="flex items-center gap-2 text-gray-300 text-sm">
-                      <div className="w-1.5 h-1.5 bg-rose-500 rounded-full flex-shrink-0" />
-                      {feat}
+                <p className="text-sm leading-relaxed mb-5" style={{ color: "rgba(255,255,255,0.55)" }}>
+                  {s.desc}
+                </p>
+                <ul className="space-y-2 mt-auto mb-6">
+                  {s.features.map((f) => (
+                    <li key={f} className="flex items-center gap-2 text-sm" style={{ color: "rgba(255,255,255,0.65)" }}>
+                      <div className="w-1.5 h-1.5 rounded-full flex-shrink-0" style={{ background: "#f0187d" }} />
+                      {f}
                     </li>
                   ))}
                 </ul>
-                <Link href="/contact" className="mt-6 block text-center bg-rose-600 hover:bg-rose-500 text-white font-semibold py-2.5 rounded-xl transition-colors text-sm">
+                <Link
+                  href="/contact"
+                  className="block text-center btn-gradient text-white font-semibold py-3 rounded-xl text-sm"
+                >
                   Book This Service
                 </Link>
               </div>
             ))}
           </div>
-        </div>
-      </section>
 
-      {/* Note */}
-      <section className="py-12 bg-gray-950">
-        <div className="max-w-3xl mx-auto px-4 text-center">
-          <div className="bg-gray-800/50 border border-gray-700/30 rounded-2xl p-8">
-            <h3 className="text-white font-bold text-xl mb-3">Custom Packages Available</h3>
-            <p className="text-gray-400 text-sm leading-relaxed mb-6">
-              Need something specific? We offer fully customized packages to meet your unique desires. Contact us and we will arrange a tailor-made experience just for you.
+          {/* Custom */}
+          <div
+            className="mt-14 rounded-3xl p-10 text-center"
+            style={{
+              background: "linear-gradient(135deg, rgba(240,24,125,0.1) 0%, rgba(245,112,61,0.07) 100%)",
+              border: "1px solid rgba(240,24,125,0.2)",
+            }}
+          >
+            <div className="text-5xl mb-4">✨</div>
+            <h3
+              className="text-white text-2xl font-bold mb-2"
+              style={{ fontFamily: "var(--font-playfair)" }}
+            >
+              Custom Packages Available
+            </h3>
+            <p className="text-sm mb-7 max-w-lg mx-auto" style={{ color: "rgba(255,255,255,0.52)" }}>
+              Have something specific in mind? We create fully tailored experiences designed just for you.
             </p>
-            <Link href="/contact" className="inline-block bg-rose-600 hover:bg-rose-500 text-white font-semibold px-8 py-3 rounded-full transition-colors">
+            <Link href="/contact" className="btn-gradient glow-pink text-white font-bold px-10 py-4 rounded-full text-sm">
               Enquire Now
             </Link>
           </div>

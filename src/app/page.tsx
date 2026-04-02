@@ -1,179 +1,329 @@
+import Image from "next/image";
 import Link from "next/link";
 
-const services = [
-  { icon: "💎", title: "Elite Companions", desc: "Hand-picked, sophisticated companions for dinners, events, and social occasions." },
-  { icon: "🌹", title: "In-Call Services", desc: "Private, comfortable, and safe in-call facilities available across Patna." },
-  { icon: "🚗", title: "Out-Call Services", desc: "We come to your hotel or residence at your convenience, discreetly." },
-  { icon: "🌙", title: "Overnight Packages", desc: "Extended companionship packages for the full night experience." },
-  { icon: "✈️", title: "Travel Companions", desc: "Beautiful companions to accompany you on business or leisure trips." },
-  { icon: "🎉", title: "Event Escort", desc: "Make any event memorable with a charming and well-dressed companion." },
+const featured = [
+  { name: "Sonia",   img: "/images/soniya.webp",  tag: "⭐ Star Girl" },
+  { name: "Priya",   img: "/images/priya.webp",   tag: "💎 Elite" },
+  { name: "Anaya",   img: "/images/anaya.webp",   tag: "✨ VIP" },
+  { name: "Natasha", img: "/images/natasha.webp", tag: "🔥 Hot Pick" },
+  { name: "Diya",    img: "/images/diya.webp",    tag: "💫 Premium" },
+  { name: "Neelima", img: "/images/neelima.webp", tag: "👑 Exclusive" },
 ];
 
-const testimonials = [
-  { name: "Rahul S.", text: "Absolutely professional service. The companion was charming, punctual, and made my evening unforgettable.", rating: 5 },
-  { name: "Amit K.", text: "Discreet, safe, and trustworthy. Best escort service in Patna by a mile.", rating: 5 },
-  { name: "Vikram M.", text: "Top-class experience. Easy to book, responsive support, and a wonderful companion.", rating: 5 },
+const services = [
+  { icon: "🌹", title: "In-Call Services",   desc: "Private, luxurious in-call venues across Patna — clean, discreet, and available 24/7." },
+  { icon: "🚗", title: "Out-Call Services",  desc: "We come to your hotel or home, on time, every time — completely discreet." },
+  { icon: "🌙", title: "Overnight Package",  desc: "A full night of warm companionship. Extended time, extended pleasure." },
+  { icon: "✈️", title: "Travel Companion",   desc: "Take a beautiful companion on any trip — business or leisure." },
 ];
 
 export default function HomePage() {
   return (
     <>
-      {/* Hero */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gray-950 pt-16">
-        <div className="absolute inset-0 bg-gradient-to-br from-rose-950/40 via-gray-950 to-gray-900" />
-        <div className="absolute top-20 left-1/4 w-96 h-96 bg-rose-700/10 rounded-full blur-3xl" />
-        <div className="absolute bottom-20 right-1/4 w-72 h-72 bg-rose-900/10 rounded-full blur-3xl" />
-        <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
-          <span className="inline-block bg-rose-900/40 text-rose-400 text-xs font-semibold tracking-widest uppercase px-4 py-1.5 rounded-full mb-6 border border-rose-800/40">
-            #1 Escort Service in Patna
-          </span>
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight mb-6">
-            Premium{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-rose-400 to-rose-600">
-              Escorts
-            </span>{" "}
-            in Patna
-          </h1>
-          <p className="text-gray-400 text-lg sm:text-xl max-w-2xl mx-auto mb-10 leading-relaxed">
-            Experience the finest companion services in Patna. Discreet, professional, and available 24/7 for your pleasure.
+      {/* ─────────── HERO ─────────── */}
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+        <div className="absolute inset-0">
+          <Image
+            src="/images/banner.webp"
+            alt="Hot Sonia escorts Patna"
+            fill
+            className="object-cover object-top"
+            priority
+          />
+          <div
+            className="absolute inset-0"
+            style={{
+              background:
+                "linear-gradient(180deg, rgba(10,2,8,0.55) 0%, rgba(10,2,8,0.45) 30%, rgba(10,2,8,0.88) 75%, #0a0208 100%)",
+            }}
+          />
+          {/* Radial pink glow */}
+          <div
+            className="absolute inset-0 opacity-30"
+            style={{
+              background:
+                "radial-gradient(ellipse at 50% 80%, rgba(240,24,125,0.4) 0%, transparent 65%)",
+            }}
+          />
+        </div>
+
+        <div className="relative z-10 text-center px-4 max-w-4xl mx-auto pt-24 pb-20">
+          <Image
+            src="/images/logo.png"
+            alt="Hot Sonia"
+            width={280}
+            height={112}
+            className="h-28 sm:h-36 w-auto object-contain mx-auto mb-6 drop-shadow-2xl"
+            priority
+          />
+
+          <p
+            className="text-xs sm:text-sm uppercase tracking-[0.35em] mb-5 font-semibold"
+            style={{ color: "#f5c842" }}
+          >
+            ✦ Premium Escort Service in Patna ✦
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/contact" className="bg-rose-600 hover:bg-rose-500 text-white font-semibold px-8 py-3.5 rounded-full transition-all duration-200 text-base shadow-lg shadow-rose-900/40">
-              Book Now
+
+          <h1
+            className="text-3xl sm:text-5xl md:text-6xl font-bold leading-snug mb-5"
+            style={{ fontFamily: "var(--font-playfair)" }}
+          >
+            <span className="gradient-text">Luxury. Desire.</span>
+            <br />
+            <span className="text-white">Pure Discretion.</span>
+          </h1>
+
+          <p
+            className="text-sm sm:text-base max-w-xl mx-auto mb-12 leading-relaxed"
+            style={{ color: "rgba(255,255,255,0.65)" }}
+          >
+            Experience Patna&apos;s most exclusive companion service. Real photos, verified companions, and absolute discretion — available 24/7, just for you.
+          </p>
+
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-14">
+            <Link href="/contact" className="btn-gradient glow-pink text-white font-bold px-10 py-4 rounded-full text-base">
+              Book Now ✨
             </Link>
-            <Link href="/services" className="border border-rose-700/50 hover:border-rose-500 text-gray-300 hover:text-white font-semibold px-8 py-3.5 rounded-full transition-all duration-200 text-base">
-              View Services
+            <Link
+              href="/gallery"
+              className="font-semibold px-10 py-4 rounded-full text-base border-2 transition-all duration-300 hover:border-hot-pink"
+              style={{ borderColor: "rgba(240,24,125,0.5)", color: "#fff" }}
+            >
+              View Gallery 💎
             </Link>
           </div>
-          <div className="mt-16 grid grid-cols-3 gap-8 max-w-lg mx-auto">
+
+          {/* Stats pill */}
+          <div
+            className="inline-flex flex-wrap justify-center gap-8 sm:gap-12 px-8 py-5 rounded-2xl"
+            style={{
+              background: "rgba(20, 3, 15, 0.75)",
+              backdropFilter: "blur(16px)",
+              border: "1px solid rgba(240,24,125,0.2)",
+            }}
+          >
             {[
-              { value: "500+", label: "Happy Clients" },
-              { value: "50+", label: "Companions" },
-              { value: "24/7", label: "Available" },
-            ].map((stat) => (
-              <div key={stat.label} className="text-center">
-                <div className="text-2xl sm:text-3xl font-bold text-rose-400">{stat.value}</div>
-                <div className="text-xs text-gray-500 mt-1 uppercase tracking-widest">{stat.label}</div>
+              { v: "500+", l: "Happy Clients" },
+              { v: "12+",  l: "Companions" },
+              { v: "24/7", l: "Available" },
+              { v: "100%", l: "Discreet" },
+            ].map((s) => (
+              <div key={s.l} className="text-center">
+                <div className="text-2xl sm:text-3xl font-bold gradient-text">{s.v}</div>
+                <div className="text-xs mt-1 uppercase tracking-widest" style={{ color: "rgba(255,255,255,0.45)" }}>
+                  {s.l}
+                </div>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Services */}
-      <section id="services" className="py-20 bg-gray-900">
+      {/* ─────────── FEATURED COMPANIONS ─────────── */}
+      <section
+        className="py-20"
+        style={{ background: "linear-gradient(180deg, #0a0208 0%, #100009 100%)" }}
+      >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-14">
-            <span className="text-rose-500 text-sm uppercase tracking-widest font-semibold">What We Offer</span>
-            <h2 className="text-3xl sm:text-4xl font-bold text-white mt-2">Our Services</h2>
-            <p className="text-gray-400 mt-4 max-w-xl mx-auto">
-              We offer a wide range of premium companion services tailored to your needs and preferences.
+          <div className="text-center mb-12">
+            <p className="text-xs uppercase tracking-[0.25em] font-bold mb-2" style={{ color: "#f5c842" }}>
+              ✦ Meet Our Girls ✦
+            </p>
+            <h2
+              className="text-3xl sm:text-4xl font-bold"
+              style={{ fontFamily: "var(--font-playfair)" }}
+            >
+              <span className="gradient-text">Featured Companions</span>
+            </h2>
+            <p className="mt-3 text-sm" style={{ color: "rgba(255,255,255,0.45)" }}>
+              Handpicked · Verified · Stunning
             </p>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {services.map((service) => (
-              <div key={service.title} className="bg-gray-800/50 border border-gray-700/50 rounded-2xl p-6 hover:border-rose-700/50 hover:bg-gray-800 transition-all duration-300 group">
-                <div className="text-4xl mb-4">{service.icon}</div>
-                <h3 className="text-white font-semibold text-lg mb-2 group-hover:text-rose-400 transition-colors">{service.title}</h3>
-                <p className="text-gray-400 text-sm leading-relaxed">{service.desc}</p>
-              </div>
-            ))}
-          </div>
-          <div className="text-center mt-10">
-            <Link href="/services" className="inline-block border border-rose-700/50 hover:border-rose-500 text-gray-300 hover:text-white font-semibold px-8 py-3 rounded-full transition-all duration-200 text-sm">
-              See All Services
-            </Link>
-          </div>
-        </div>
-      </section>
 
-      {/* Why Us */}
-      <section className="py-20 bg-gray-950">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <span className="text-rose-500 text-sm uppercase tracking-widest font-semibold">Why Us</span>
-              <h2 className="text-3xl sm:text-4xl font-bold text-white mt-2 mb-6">The Most Trusted Escort Service in Patna</h2>
-              <div className="space-y-5">
-                {[
-                  { title: "100% Verified Companions", desc: "All our companions are thoroughly verified, professional, and trained." },
-                  { title: "Complete Discretion", desc: "Your privacy is our top priority. All bookings are fully confidential." },
-                  { title: "24/7 Availability", desc: "Available around the clock to serve you at your convenience." },
-                  { title: "Safe and Secure", desc: "We prioritize safety for both clients and companions at all times." },
-                ].map((item) => (
-                  <div key={item.title} className="flex gap-4">
-                    <div className="flex-shrink-0 w-6 h-6 bg-rose-600 rounded-full flex items-center justify-center mt-0.5">
-                      <svg className="w-3.5 h-3.5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
-                      </svg>
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
+            {featured.map((c) => (
+              <Link
+                href="/gallery"
+                key={c.name}
+                className="companion-card group relative rounded-2xl overflow-hidden block"
+                style={{ border: "1px solid rgba(240,24,125,0.15)" }}
+              >
+                <div className="relative aspect-[3/4]">
+                  <Image src={c.img} alt={c.name} fill className="object-cover" />
+                  <div
+                    className="absolute inset-0"
+                    style={{
+                      background: "linear-gradient(180deg, transparent 45%, rgba(10,2,8,0.96) 100%)",
+                    }}
+                  />
+                  <div className="absolute bottom-0 left-0 right-0 p-3">
+                    <div
+                      className="text-white font-bold text-sm"
+                      style={{ fontFamily: "var(--font-playfair)" }}
+                    >
+                      {c.name}
                     </div>
-                    <div>
-                      <h4 className="text-white font-semibold">{item.title}</h4>
-                      <p className="text-gray-400 text-sm mt-1">{item.desc}</p>
+                    <div className="text-xs mt-0.5" style={{ color: "#f5c842" }}>{c.tag}</div>
+                    <div
+                      className="companion-info mt-2 text-xs font-semibold text-center py-1.5 rounded-full btn-gradient"
+                      style={{ color: "#fff" }}
+                    >
+                      Book Now
                     </div>
                   </div>
-                ))}
-              </div>
-              <Link href="/about" className="inline-block mt-8 bg-rose-600 hover:bg-rose-500 text-white font-semibold px-8 py-3 rounded-full transition-colors duration-200">
-                Learn More About Us
-              </Link>
-            </div>
-            <div className="bg-gradient-to-br from-rose-900/30 to-gray-800/50 border border-rose-800/30 rounded-3xl p-8 text-center">
-              <div className="text-6xl mb-4">🌹</div>
-              <h3 className="text-2xl font-bold text-white mb-2">Premium Experience</h3>
-              <p className="text-gray-400 mb-6">We guarantee an unforgettable experience with our elite companions.</p>
-              <div className="grid grid-cols-2 gap-4">
-                {[
-                  { v: "5 Star", l: "Rating" },
-                  { v: "100%", l: "Discreet" },
-                  { v: "24/7", l: "Support" },
-                  { v: "Safe", l: "Verified" },
-                ].map((item) => (
-                  <div key={item.l} className="bg-gray-900/60 rounded-xl p-3 border border-gray-700/30">
-                    <div className="text-rose-400 font-bold text-xl">{item.v}</div>
-                    <div className="text-gray-500 text-xs mt-1">{item.l}</div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Testimonials */}
-      <section className="py-20 bg-gray-900">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-14">
-            <span className="text-rose-500 text-sm uppercase tracking-widest font-semibold">Client Reviews</span>
-            <h2 className="text-3xl sm:text-4xl font-bold text-white mt-2">What Our Clients Say</h2>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {testimonials.map((t) => (
-              <div key={t.name} className="bg-gray-800/50 border border-gray-700/50 rounded-2xl p-6">
-                <div className="flex gap-1 mb-4">
-                  {Array.from({ length: t.rating }).map((_, i) => (
-                    <span key={i} className="text-rose-400 text-lg">&#9733;</span>
-                  ))}
                 </div>
-                <p className="text-gray-300 text-sm leading-relaxed italic mb-4">{t.text}</p>
-                <div className="text-rose-500 font-semibold text-sm">— {t.name}</div>
+              </Link>
+            ))}
+          </div>
+
+          <div className="text-center mt-10">
+            <Link
+              href="/gallery"
+              className="inline-flex items-center gap-2 font-semibold text-sm px-8 py-3 rounded-full border-2 transition-all duration-300"
+              style={{ borderColor: "#f0187d", color: "#f0187d" }}
+            >
+              View All 12 Companions →
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* ─────────── SERVICES ─────────── */}
+      <section className="py-20" style={{ background: "#100009" }}>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <p className="text-xs uppercase tracking-[0.25em] font-bold mb-2" style={{ color: "#f5c842" }}>
+              ✦ What We Offer ✦
+            </p>
+            <h2
+              className="text-3xl sm:text-4xl font-bold"
+              style={{ fontFamily: "var(--font-playfair)" }}
+            >
+              <span className="gradient-text">Our Services</span>
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {services.map((s) => (
+              <div
+                key={s.title}
+                className="card-glass rounded-2xl p-6 text-center hover:scale-105 transition-transform duration-300 group"
+              >
+                <div className="text-5xl mb-4">{s.icon}</div>
+                <h3
+                  className="text-white font-bold mb-2"
+                  style={{ fontFamily: "var(--font-playfair)" }}
+                >
+                  {s.title}
+                </h3>
+                <p className="text-sm leading-relaxed" style={{ color: "rgba(255,255,255,0.52)" }}>
+                  {s.desc}
+                </p>
+              </div>
+            ))}
+          </div>
+
+          <div className="text-center mt-10">
+            <Link href="/services" className="btn-gradient glow-pink text-white font-bold px-10 py-3.5 rounded-full text-sm">
+              Explore All Services
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* ─────────── WHY HOT SONIA ─────────── */}
+      <section
+        className="py-20"
+        style={{ background: "linear-gradient(135deg, #0a0208 0%, #180310 100%)" }}
+      >
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <p className="text-xs uppercase tracking-[0.25em] font-bold mb-2" style={{ color: "#f5c842" }}>
+              ✦ Why Choose Us ✦
+            </p>
+            <h2
+              className="text-3xl sm:text-4xl font-bold"
+              style={{ fontFamily: "var(--font-playfair)" }}
+            >
+              <span className="gradient-text">The Best in Patna</span>
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {[
+              { icon: "✅", title: "Verified Companions",       desc: "Every companion is personally verified & professionally trained." },
+              { icon: "🔒", title: "100% Discreet",             desc: "Your identity and booking details remain completely private." },
+              { icon: "⚡", title: "Instant Booking",           desc: "Book in minutes — fast, simple, and hassle-free." },
+              { icon: "💯", title: "Satisfaction Guaranteed",   desc: "Every client leaves with a smile. That is our promise." },
+              { icon: "🛡️", title: "Safe & Secure",             desc: "Safety for both clients and companions is non-negotiable." },
+              { icon: "👑", title: "Premium Quality Only",      desc: "Only the finest companions and venues. Always the best." },
+            ].map((item) => (
+              <div
+                key={item.title}
+                className="card-glass rounded-2xl p-6 flex gap-4 items-start hover:scale-[1.02] transition-transform duration-300"
+              >
+                <span className="text-3xl flex-shrink-0">{item.icon}</span>
+                <div>
+                  <h4
+                    className="text-white font-bold mb-1"
+                    style={{ fontFamily: "var(--font-playfair)" }}
+                  >
+                    {item.title}
+                  </h4>
+                  <p className="text-sm leading-relaxed" style={{ color: "rgba(255,255,255,0.52)" }}>
+                    {item.desc}
+                  </p>
+                </div>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="py-16 bg-gradient-to-r from-rose-950 to-rose-900/60">
-        <div className="max-w-4xl mx-auto px-4 text-center">
-          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">Ready to Book?</h2>
-          <p className="text-rose-200 mb-8 text-lg">Contact us now and let us arrange the perfect companion experience for you.</p>
+      {/* ─────────── CTA BANNER ─────────── */}
+      <section
+        className="py-20 relative overflow-hidden"
+        style={{
+          background: "linear-gradient(135deg, #7a0035 0%, #3a0018 50%, #5e0028 100%)",
+        }}
+      >
+        <div
+          className="absolute inset-0 opacity-25"
+          style={{
+            backgroundImage:
+              "radial-gradient(circle at 20% 50%, #f0187d 0%, transparent 55%), radial-gradient(circle at 80% 50%, #f5703d 0%, transparent 55%)",
+          }}
+        />
+        <div className="relative z-10 max-w-3xl mx-auto px-4 text-center">
+          <Image
+            src="/images/logo.png"
+            alt="Hot Sonia"
+            width={200}
+            height={80}
+            className="h-24 w-auto object-contain mx-auto mb-6 drop-shadow-2xl"
+          />
+          <h2
+            className="text-3xl sm:text-4xl font-bold text-white mb-4"
+            style={{ fontFamily: "var(--font-playfair)" }}
+          >
+            Ready for an Unforgettable Night?
+          </h2>
+          <p className="text-lg mb-10" style={{ color: "rgba(255,200,200,0.85)" }}>
+            Our companions are waiting. Book now and experience Patna&apos;s finest.
+          </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/contact" className="bg-white text-rose-700 font-bold px-8 py-3.5 rounded-full hover:bg-gray-100 transition-colors text-base">
-              Book Now
+            <Link
+              href="/contact"
+              className="bg-white font-bold px-10 py-4 rounded-full text-base hover:bg-gray-100 transition-colors"
+              style={{ color: "#f0187d" }}
+            >
+              Book Now ✨
             </Link>
-            <a href="tel:+919999999999" className="border-2 border-white/60 hover:border-white text-white font-semibold px-8 py-3.5 rounded-full transition-colors text-base">
-              Call Us: +91 99999 99999
+            <a
+              href="tel:+919999999999"
+              className="border-2 border-white/55 hover:border-white text-white font-semibold px-10 py-4 rounded-full transition-colors text-base"
+            >
+              📞 Call Us Now
             </a>
           </div>
         </div>

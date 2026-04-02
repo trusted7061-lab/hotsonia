@@ -1,70 +1,76 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-950 border-t border-rose-900/20 text-gray-400">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <footer
+      style={{
+        background: "linear-gradient(180deg, #0a0208 0%, #12000a 100%)",
+        borderTop: "1px solid rgba(240, 24, 125, 0.18)",
+      }}
+    >
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
-          {/* Brand */}
           <div>
-            <Link href="/" className="text-rose-500 text-2xl font-bold tracking-tight">
-              PatnaEscorts
-            </Link>
-            <p className="mt-3 text-sm leading-relaxed">
-              Premium companion services in Patna. Discreet, professional, and always available for you.
+            <Image
+              src="/images/logo.png"
+              alt="Hot Sonia"
+              width={160}
+              height={64}
+              className="h-16 w-auto object-contain mb-4"
+            />
+            <p className="text-sm leading-relaxed mb-5" style={{ color: "rgba(255,255,255,0.45)" }}>
+              Patna&apos;s most exclusive, trusted, and discreet companion service. Available 24/7 for your pleasure.
             </p>
-            <div className="flex gap-4 mt-5">
-              <a
-                href="tel:+919999999999"
-                className="text-rose-400 hover:text-rose-300 transition-colors text-sm"
-              >
-                📞 +91 99999 99999
-              </a>
-            </div>
+            <a href="tel:+919999999999" className="text-sm font-bold" style={{ color: "#f0187d" }}>
+              📞 +91 99999 99999
+            </a>
           </div>
 
-          {/* Quick Links */}
           <div>
-            <h3 className="text-white font-semibold mb-4 text-sm uppercase tracking-widest">
+            <h3 className="text-xs font-bold uppercase tracking-[0.2em] mb-5" style={{ color: "#f5c842" }}>
               Quick Links
             </h3>
-            <ul className="space-y-2 text-sm">
+            <ul className="space-y-3">
               {[
                 { label: "Home", href: "/" },
-                { label: "About Us", href: "/about" },
-                { label: "Our Services", href: "/services" },
                 { label: "Gallery", href: "/gallery" },
+                { label: "Services", href: "/services" },
+                { label: "About Us", href: "/about" },
                 { label: "Contact", href: "/contact" },
-              ].map((link) => (
-                <li key={link.href}>
+              ].map((l) => (
+                <li key={l.href}>
                   <Link
-                    href={link.href}
-                    className="hover:text-rose-400 transition-colors"
+                    href={l.href}
+                    className="text-sm transition-colors hover:text-hot-pink"
+                    style={{ color: "rgba(255,255,255,0.5)" }}
                   >
-                    {link.label}
+                    {l.label}
                   </Link>
                 </li>
               ))}
             </ul>
           </div>
 
-          {/* Contact Info */}
           <div>
-            <h3 className="text-white font-semibold mb-4 text-sm uppercase tracking-widest">
-              Contact Us
+            <h3 className="text-xs font-bold uppercase tracking-[0.2em] mb-5" style={{ color: "#f5c842" }}>
+              Contact
             </h3>
-            <ul className="space-y-2 text-sm">
+            <ul className="space-y-3 text-sm" style={{ color: "rgba(255,255,255,0.5)" }}>
               <li>📍 Patna, Bihar, India</li>
-              <li>📧 contact@patnaescorts.com</li>
-              <li>⏰ Available 24/7</li>
+              <li>📧 contact@hotsonia.com</li>
+              <li>⏰ Available 24 / 7</li>
               <li>🔒 100% Discreet &amp; Safe</li>
             </ul>
           </div>
         </div>
 
-        <div className="mt-10 pt-6 border-t border-gray-800 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-gray-600">
-          <p>© {new Date().getFullYear()} PatnaEscorts. All rights reserved.</p>
-          <p>18+ Only. For adults only.</p>
+        <div
+          className="mt-10 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs"
+          style={{ borderTop: "1px solid rgba(240,24,125,0.12)", color: "rgba(255,255,255,0.3)" }}
+        >
+          <p>© {new Date().getFullYear()} Hot Sonia. All rights reserved.</p>
+          <p>18+ Only — Adults Only</p>
         </div>
       </div>
     </footer>

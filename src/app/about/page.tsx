@@ -1,97 +1,143 @@
 import Link from "next/link";
+import Image from "next/image";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "About Us | PatnaEscorts",
-  description: "Learn about PatnaEscorts — the most trusted escort service in Patna, Bihar.",
+  title: "About Us | Hot Sonia — Premium Escorts Patna",
+  description: "Learn about Hot Sonia — Patna's most trusted and premium escort service.",
 };
 
 export default function AboutPage() {
   return (
     <>
       {/* Hero */}
-      <section className="pt-32 pb-16 bg-gray-950">
-        <div className="max-w-4xl mx-auto px-4 text-center">
-          <span className="text-rose-500 text-sm uppercase tracking-widest font-semibold">Who We Are</span>
-          <h1 className="text-4xl sm:text-5xl font-bold text-white mt-2 mb-6">About PatnaEscorts</h1>
-          <p className="text-gray-400 text-lg leading-relaxed">
-            We are Patna&apos;s most trusted premium escort and companion service. Our mission is to provide safe, discreet, and memorable experiences to discerning clients across Patna and Bihar.
+      <section
+        className="pt-32 pb-14 text-center"
+        style={{ background: "linear-gradient(180deg, #0a0208 0%, #100009 100%)" }}
+      >
+        <div className="max-w-4xl mx-auto px-4">
+          <p className="text-xs uppercase tracking-[0.28em] font-bold mb-2" style={{ color: "#f5c842" }}>
+            ✦ Our Story ✦
+          </p>
+          <h1
+            className="text-4xl sm:text-5xl font-bold mb-5"
+            style={{ fontFamily: "var(--font-playfair)" }}
+          >
+            <span className="gradient-text">About Hot Sonia</span>
+          </h1>
+          <p
+            className="text-base max-w-2xl mx-auto leading-relaxed"
+            style={{ color: "rgba(255,255,255,0.52)" }}
+          >
+            Patna&apos;s most exclusive and trusted companion service — built on discretion, beauty, and completely unforgettable experiences.
           </p>
         </div>
       </section>
 
-      {/* Story */}
-      <section className="py-16 bg-gray-900">
+      {/* Story + Stats */}
+      <section className="py-16" style={{ background: "#0a0208" }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
             <div>
-              <span className="text-rose-500 text-sm uppercase tracking-widest font-semibold">Our Story</span>
-              <h2 className="text-3xl font-bold text-white mt-2 mb-4">Built on Trust and Discretion</h2>
-              <div className="space-y-4 text-gray-400 leading-relaxed">
+              <p className="text-xs uppercase tracking-[0.25em] font-bold mb-3" style={{ color: "#f5c842" }}>
+                Who We Are
+              </p>
+              <h2
+                className="text-3xl font-bold mb-6"
+                style={{ fontFamily: "var(--font-playfair)" }}
+              >
+                <span className="gradient-text">Born from a Vision of Luxury</span>
+              </h2>
+              <div className="space-y-4 text-sm leading-relaxed" style={{ color: "rgba(255,255,255,0.58)" }}>
                 <p>
-                  PatnaEscorts was founded with a simple vision: to offer a premium, professional, and safe companion experience to clients in Patna. We understood that the existing market lacked the quality, discretion, and safety standards that clients deserved.
+                  Hot Sonia was founded with one goal: to redefine the companion experience in Patna. We saw a gap in the market for a service that truly combined beauty, safety, and discretion — and we filled it.
                 </p>
                 <p>
-                  Over the years, we have grown to become the go-to service for clients who value quality and professionalism. Our carefully curated companions are selected for their charm, intelligence, and commitment to providing a world-class experience.
+                  Every companion on our platform is personally interviewed, verified, and committed to delivering a world-class experience. We never compromise on quality.
                 </p>
                 <p>
-                  We operate with full transparency and adhere to the highest ethical standards, ensuring that both our clients and companions feel respected, safe, and valued at all times.
+                  Over the years, we have proudly served hundreds of satisfied clients — from local businessmen to out-of-town visitors — all seeking the same thing: a memorable, discreet, and luxurious companionship experience.
                 </p>
               </div>
+              <Link href="/contact" className="btn-gradient glow-pink text-white font-bold px-8 py-3.5 rounded-full text-sm inline-block mt-8">
+                Book an Experience
+              </Link>
             </div>
-            <div className="grid grid-cols-2 gap-4">
-              {[
-                { number: "5+", label: "Years of Experience" },
-                { number: "500+", label: "Happy Clients" },
-                { number: "50+", label: "Elite Companions" },
-                { number: "24/7", label: "Support Available" },
-              ].map((item) => (
-                <div key={item.label} className="bg-gray-800/50 border border-gray-700/40 rounded-2xl p-6 text-center">
-                  <div className="text-3xl font-bold text-rose-400 mb-2">{item.number}</div>
-                  <div className="text-gray-400 text-sm">{item.label}</div>
+
+            {/* Logo + stats */}
+            <div>
+              <div
+                className="rounded-3xl p-8 text-center"
+                style={{
+                  background: "linear-gradient(135deg, rgba(240,24,125,0.1) 0%, rgba(245,112,61,0.07) 100%)",
+                  border: "1px solid rgba(240,24,125,0.2)",
+                }}
+              >
+                <Image
+                  src="/images/logo.png"
+                  alt="Hot Sonia"
+                  width={200}
+                  height={80}
+                  className="h-20 w-auto object-contain mx-auto mb-8"
+                />
+                <div className="grid grid-cols-2 gap-4">
+                  {[
+                    { v: "5+",   l: "Years Active" },
+                    { v: "500+", l: "Happy Clients" },
+                    { v: "12+",  l: "Companions" },
+                    { v: "24/7", l: "Available" },
+                  ].map((s) => (
+                    <div
+                      key={s.l}
+                      className="rounded-2xl p-4 text-center"
+                      style={{ background: "rgba(10,2,8,0.8)", border: "1px solid rgba(240,24,125,0.14)" }}
+                    >
+                      <div className="text-2xl font-bold gradient-text">{s.v}</div>
+                      <div className="text-xs mt-1" style={{ color: "rgba(255,255,255,0.4)" }}>{s.l}</div>
+                    </div>
+                  ))}
                 </div>
-              ))}
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       {/* Values */}
-      <section className="py-16 bg-gray-950">
+      <section className="py-16" style={{ background: "#100009" }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <span className="text-rose-500 text-sm uppercase tracking-widest font-semibold">What We Stand For</span>
-            <h2 className="text-3xl font-bold text-white mt-2">Our Core Values</h2>
+            <p className="text-xs uppercase tracking-[0.25em] font-bold mb-2" style={{ color: "#f5c842" }}>
+              ✦ What We Stand For ✦
+            </p>
+            <h2
+              className="text-3xl font-bold"
+              style={{ fontFamily: "var(--font-playfair)" }}
+            >
+              <span className="gradient-text">Our Core Values</span>
+            </h2>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { icon: "🔒", title: "Privacy", desc: "Your identity and activities are 100% confidential with us." },
-              { icon: "✅", title: "Safety", desc: "We ensure all companions and clients meet in safe, vetted settings." },
-              { icon: "💼", title: "Professionalism", desc: "Every interaction is handled with the utmost professionalism." },
-              { icon: "💡", title: "Quality", desc: "We never compromise on the quality of companions or experience." },
+              { icon: "🔒", title: "Privacy First",    desc: "Every booking is 100% confidential. We never share client information." },
+              { icon: "✅", title: "Verified Girls",   desc: "All companions are personally vetted and verified before onboarding." },
+              { icon: "💎", title: "Premium Quality",  desc: "From companions to venues — only the highest standards are accepted." },
+              { icon: "❤️", title: "Client Care",      desc: "Your satisfaction and comfort are our absolute top priorities." },
             ].map((v) => (
-              <div key={v.title} className="bg-gray-800/50 border border-gray-700/40 rounded-2xl p-6 text-center hover:border-rose-700/40 transition-colors">
+              <div
+                key={v.title}
+                className="card-glass rounded-2xl p-6 text-center hover:scale-105 transition-transform duration-300"
+              >
                 <div className="text-4xl mb-3">{v.icon}</div>
-                <h3 className="text-white font-semibold mb-2">{v.title}</h3>
-                <p className="text-gray-400 text-sm">{v.desc}</p>
+                <h3
+                  className="text-white font-bold mb-2"
+                  style={{ fontFamily: "var(--font-playfair)" }}
+                >
+                  {v.title}
+                </h3>
+                <p className="text-sm" style={{ color: "rgba(255,255,255,0.52)" }}>{v.desc}</p>
               </div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA */}
-      <section className="py-16 bg-gradient-to-r from-rose-950 to-rose-900/60">
-        <div className="max-w-3xl mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold text-white mb-4">Ready to Experience the Best?</h2>
-          <p className="text-rose-200 mb-8">Browse our services or get in touch to arrange your perfect companion.</p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/services" className="bg-white text-rose-700 font-bold px-8 py-3.5 rounded-full hover:bg-gray-100 transition-colors">
-              View Services
-            </Link>
-            <Link href="/contact" className="border-2 border-white/60 hover:border-white text-white font-semibold px-8 py-3.5 rounded-full transition-colors">
-              Contact Us
-            </Link>
           </div>
         </div>
       </section>

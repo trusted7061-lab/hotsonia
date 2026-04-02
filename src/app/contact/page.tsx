@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 
 export default function ContactPage() {
   const [form, setForm] = useState({ name: "", phone: "", service: "", message: "" });
@@ -11,51 +12,93 @@ export default function ContactPage() {
     setSubmitted(true);
   };
 
+  const inputStyle = {
+    background: "rgba(10,2,8,0.85)",
+    border: "1px solid rgba(240,24,125,0.2)",
+    color: "#fff",
+  };
+
   return (
     <>
-      <section className="pt-32 pb-16 bg-gray-950">
-        <div className="max-w-4xl mx-auto px-4 text-center">
-          <span className="text-rose-500 text-sm uppercase tracking-widest font-semibold">Get In Touch</span>
-          <h1 className="text-4xl sm:text-5xl font-bold text-white mt-2 mb-6">Contact Us</h1>
-          <p className="text-gray-400 text-lg leading-relaxed">
-            Ready to book? Have a question? We are available 24/7 — reach out and we will get back to you promptly and discreetly.
+      {/* Hero */}
+      <section
+        className="pt-32 pb-14 text-center"
+        style={{ background: "linear-gradient(180deg, #0a0208 0%, #100009 100%)" }}
+      >
+        <div className="max-w-4xl mx-auto px-4">
+          <p className="text-xs uppercase tracking-[0.28em] font-bold mb-2" style={{ color: "#f5c842" }}>
+            ✦ Reach Out ✦
+          </p>
+          <h1
+            className="text-4xl sm:text-5xl font-bold mb-4"
+            style={{ fontFamily: "var(--font-playfair)" }}
+          >
+            <span className="gradient-text">Book Your Experience</span>
+          </h1>
+          <p className="text-sm" style={{ color: "rgba(255,255,255,0.52)" }}>
+            Available 24/7 — Fast, discreet response. All messages are strictly private.
           </p>
         </div>
       </section>
 
-      <section className="py-16 bg-gray-900">
+      <section className="py-10 pb-24" style={{ background: "#0a0208" }}>
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            {/* Contact Info */}
+            {/* Info Panel */}
             <div>
-              <h2 className="text-2xl font-bold text-white mb-6">Reach Us Directly</h2>
-              <div className="space-y-5">
+              <Image
+                src="/images/logo.png"
+                alt="Hot Sonia"
+                width={160}
+                height={64}
+                className="h-16 w-auto object-contain mb-8"
+              />
+              <h2
+                className="text-2xl font-bold text-white mb-6"
+                style={{ fontFamily: "var(--font-playfair)" }}
+              >
+                Get In Touch Directly
+              </h2>
+              <div className="space-y-4">
                 {[
                   { icon: "📞", label: "Phone / WhatsApp", value: "+91 99999 99999", href: "tel:+919999999999" },
-                  { icon: "📧", label: "Email", value: "contact@patnaescorts.com", href: "mailto:contact@patnaescorts.com" },
-                  { icon: "📍", label: "Location", value: "Patna, Bihar, India", href: null },
-                  { icon: "⏰", label: "Hours", value: "Available 24 hours, 7 days a week", href: null },
+                  { icon: "📧", label: "Email",            value: "contact@hotsonia.com", href: "mailto:contact@hotsonia.com" },
+                  { icon: "📍", label: "Location",         value: "Patna, Bihar, India", href: null },
+                  { icon: "⏰", label: "Availability",     value: "24 Hours, 7 Days a Week", href: null },
                 ].map((item) => (
-                  <div key={item.label} className="flex gap-4 bg-gray-800/50 border border-gray-700/40 rounded-2xl p-4">
-                    <div className="text-2xl">{item.icon}</div>
+                  <div key={item.label} className="card-glass flex gap-4 rounded-2xl p-4">
+                    <span className="text-2xl">{item.icon}</span>
                     <div>
-                      <div className="text-gray-500 text-xs uppercase tracking-widest">{item.label}</div>
+                      <div
+                        className="text-xs uppercase tracking-widest mb-0.5"
+                        style={{ color: "rgba(255,255,255,0.32)" }}
+                      >
+                        {item.label}
+                      </div>
                       {item.href ? (
-                        <a href={item.href} className="text-white font-medium hover:text-rose-400 transition-colors">
+                        <a href={item.href} className="font-semibold text-sm" style={{ color: "#f0187d" }}>
                           {item.value}
                         </a>
                       ) : (
-                        <div className="text-white font-medium">{item.value}</div>
+                        <div className="text-white font-medium text-sm">{item.value}</div>
                       )}
                     </div>
                   </div>
                 ))}
               </div>
 
-              <div className="mt-8 bg-rose-900/20 border border-rose-800/30 rounded-2xl p-5">
-                <div className="text-rose-400 font-semibold mb-2">Discretion Guaranteed</div>
-                <p className="text-gray-400 text-sm">
-                  All communications are 100% private and confidential. We never share or disclose any client information.
+              <div
+                className="mt-8 rounded-2xl p-5"
+                style={{
+                  background: "linear-gradient(135deg, rgba(240,24,125,0.1) 0%, rgba(245,112,61,0.07) 100%)",
+                  border: "1px solid rgba(240,24,125,0.2)",
+                }}
+              >
+                <div className="font-bold mb-1" style={{ color: "#f0187d" }}>
+                  🔒 100% Discretion Guaranteed
+                </div>
+                <p className="text-sm" style={{ color: "rgba(255,255,255,0.52)" }}>
+                  All communications and bookings are strictly private and confidential. Your identity is never shared.
                 </p>
               </div>
             </div>
@@ -63,69 +106,108 @@ export default function ContactPage() {
             {/* Form */}
             <div>
               {submitted ? (
-                <div className="bg-gray-800/50 border border-rose-700/50 rounded-2xl p-8 text-center">
-                  <div className="text-5xl mb-4">✅</div>
-                  <h3 className="text-white font-bold text-xl mb-2">Message Received!</h3>
-                  <p className="text-gray-400">We will contact you within the next few minutes. Thank you!</p>
+                <div
+                  className="card-glass rounded-3xl p-12 text-center"
+                  style={{ border: "1px solid rgba(240,24,125,0.3)" }}
+                >
+                  <div className="text-6xl mb-5">✅</div>
+                  <h3
+                    className="text-white text-2xl font-bold mb-3"
+                    style={{ fontFamily: "var(--font-playfair)" }}
+                  >
+                    Booking Received!
+                  </h3>
+                  <p style={{ color: "rgba(255,255,255,0.55)" }}>
+                    We will contact you within minutes. Get ready for an unforgettable experience. 😘
+                  </p>
                 </div>
               ) : (
-                <form onSubmit={handleSubmit} className="bg-gray-800/50 border border-gray-700/40 rounded-2xl p-7 space-y-5">
-                  <h2 className="text-2xl font-bold text-white mb-2">Book Now</h2>
+                <form
+                  onSubmit={handleSubmit}
+                  className="card-glass rounded-3xl p-8 space-y-5"
+                  style={{ border: "1px solid rgba(240,24,125,0.2)" }}
+                >
+                  <h2
+                    className="text-2xl font-bold text-white mb-1"
+                    style={{ fontFamily: "var(--font-playfair)" }}
+                  >
+                    Quick Booking Form
+                  </h2>
+
+                  {[
+                    { label: "Your Name *",         key: "name",  type: "text", placeholder: "Your name" },
+                    { label: "Phone / WhatsApp *",  key: "phone", type: "tel",  placeholder: "+91 XXXXX XXXXX" },
+                  ].map((field) => (
+                    <div key={field.key}>
+                      <label
+                        className="block text-xs uppercase tracking-widest mb-2"
+                        style={{ color: "rgba(255,255,255,0.38)" }}
+                      >
+                        {field.label}
+                      </label>
+                      <input
+                        type={field.type}
+                        required
+                        value={form[field.key as keyof typeof form]}
+                        onChange={(e) => setForm({ ...form, [field.key]: e.target.value })}
+                        placeholder={field.placeholder}
+                        className="w-full rounded-xl px-4 py-3 text-sm focus:outline-none transition-all"
+                        style={inputStyle}
+                        onFocus={(e) => (e.target.style.borderColor = "#f0187d")}
+                        onBlur={(e) => (e.target.style.borderColor = "rgba(240,24,125,0.2)")}
+                      />
+                    </div>
+                  ))}
+
                   <div>
-                    <label className="block text-gray-400 text-sm mb-1.5">Your Name *</label>
-                    <input
-                      type="text"
-                      required
-                      value={form.name}
-                      onChange={(e) => setForm({ ...form, name: e.target.value })}
-                      className="w-full bg-gray-900 border border-gray-700 rounded-xl px-4 py-3 text-white placeholder-gray-600 focus:outline-none focus:border-rose-600 transition-colors text-sm"
-                      placeholder="Enter your name"
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-gray-400 text-sm mb-1.5">Phone / WhatsApp *</label>
-                    <input
-                      type="tel"
-                      required
-                      value={form.phone}
-                      onChange={(e) => setForm({ ...form, phone: e.target.value })}
-                      className="w-full bg-gray-900 border border-gray-700 rounded-xl px-4 py-3 text-white placeholder-gray-600 focus:outline-none focus:border-rose-600 transition-colors text-sm"
-                      placeholder="+91 XXXXX XXXXX"
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-gray-400 text-sm mb-1.5">Service Required</label>
+                    <label
+                      className="block text-xs uppercase tracking-widest mb-2"
+                      style={{ color: "rgba(255,255,255,0.38)" }}
+                    >
+                      Service
+                    </label>
                     <select
                       value={form.service}
                       onChange={(e) => setForm({ ...form, service: e.target.value })}
-                      className="w-full bg-gray-900 border border-gray-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-rose-600 transition-colors text-sm"
+                      className="w-full rounded-xl px-4 py-3 text-sm focus:outline-none"
+                      style={inputStyle}
                     >
                       <option value="">Select a service...</option>
-                      <option>Elite Companions</option>
                       <option>In-Call Services</option>
                       <option>Out-Call Services</option>
-                      <option>Overnight Packages</option>
-                      <option>Travel Companions</option>
-                      <option>Event Escort</option>
+                      <option>Overnight Package</option>
+                      <option>Travel Companion</option>
+                      <option>Elite Companion</option>
+                      <option>Party Companion</option>
                     </select>
                   </div>
+
                   <div>
-                    <label className="block text-gray-400 text-sm mb-1.5">Message</label>
+                    <label
+                      className="block text-xs uppercase tracking-widest mb-2"
+                      style={{ color: "rgba(255,255,255,0.38)" }}
+                    >
+                      Message
+                    </label>
                     <textarea
                       rows={4}
                       value={form.message}
                       onChange={(e) => setForm({ ...form, message: e.target.value })}
-                      className="w-full bg-gray-900 border border-gray-700 rounded-xl px-4 py-3 text-white placeholder-gray-600 focus:outline-none focus:border-rose-600 transition-colors text-sm resize-none"
-                      placeholder="Any specific requirements or questions..."
+                      placeholder="Any specific requests or questions..."
+                      className="w-full rounded-xl px-4 py-3 text-sm focus:outline-none resize-none"
+                      style={inputStyle}
+                      onFocus={(e) => (e.target.style.borderColor = "#f0187d")}
+                      onBlur={(e) => (e.target.style.borderColor = "rgba(240,24,125,0.2)")}
                     />
                   </div>
+
                   <button
                     type="submit"
-                    className="w-full bg-rose-600 hover:bg-rose-500 text-white font-semibold py-3.5 rounded-xl transition-colors text-base"
+                    className="w-full btn-gradient glow-pink text-white font-bold py-4 rounded-xl text-base"
                   >
-                    Send Booking Request
+                    Send Booking Request ✨
                   </button>
-                  <p className="text-gray-600 text-xs text-center">
+                  <p className="text-xs text-center" style={{ color: "rgba(255,255,255,0.28)" }}>
                     By submitting, you confirm you are 18+ and agree to our terms.
                   </p>
                 </form>

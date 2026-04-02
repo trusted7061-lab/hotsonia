@@ -1,34 +1,44 @@
 @import "tailwindcss";
 
-html {
-  scroll-behavior: smooth;
+@theme {
+  --color-hot-pink: #f0187d;
+  --color-hot-orange: #f5703d;
+  --color-gold: #f5c842;
 }
 
-* {
-  box-sizing: border-box;
+html { scroll-behavior: smooth; }
+
+.gradient-text {
+  background: linear-gradient(135deg, #f5703d 0%, #f0187d 55%, #c2006a 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+.btn-gradient {
+  background: linear-gradient(135deg, #f5703d 0%, #f0187d 100%);
+  transition: all 0.3s ease;
+  display: inline-block;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+.btn-gradient:hover {
+  background: linear-gradient(135deg, #ff8a50 0%, #ff2d90 100%);
+  box-shadow: 0 8px 30px rgba(240, 24, 125, 0.55);
+  transform: translateY(-2px);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.glow-pink {
+  box-shadow: 0 0 25px rgba(240, 24, 125, 0.45), 0 0 60px rgba(240, 24, 125, 0.15);
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+.card-glass {
+  background: rgba(20, 3, 15, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(240, 24, 125, 0.18);
 }
+
+.companion-card .companion-info { opacity: 0; transition: opacity 0.3s ease; }
+.companion-card:hover .companion-info { opacity: 1; }
+.companion-card img { transition: transform 0.5s ease; }
+.companion-card:hover img { transform: scale(1.07); }
