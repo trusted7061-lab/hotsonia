@@ -268,7 +268,7 @@ export default function HomePage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-5">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
             {featured.map((c) => (
               <Link
                 href="/gallery"
@@ -282,7 +282,7 @@ export default function HomePage() {
                     alt={c.alt}
                     fill
                     className="object-cover"
-                    sizes="(max-width:640px) 50vw, 25vw"
+                    sizes="(max-width:640px) 100vw, (max-width:1024px) 50vw, 25vw"
                   />
                   <div
                     className="absolute inset-0"
