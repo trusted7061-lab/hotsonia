@@ -6,11 +6,11 @@ export const metadata: Metadata = {
   title: "About Hot Sonia | #1 Escort Agency in Patna | Patna Escorts Service",
   description:
     "Learn about Hot Sonia — Patna's most trusted escort agency. 5+ years of premium escorts in Patna, 500+ happy clients, 12+ verified call girls in Patna. Discreet, safe, reliable.",
-  alternates: { canonical: "https://www.hotsonia.com/about" },
+  alternates: { canonical: "https://hotsonia.com/about" },
   openGraph: {
     title: "About Hot Sonia | #1 Escort Agency in Patna",
     description: "5+ years of premium Patna Escorts Service. 500+ happy clients. Verified call girls in Patna.",
-    images: [{ url: "https://www.hotsonia.com/images/logo.png", alt: "Hot Sonia — #1 Escort Agency in Patna" }],
+    images: [{ url: "https://hotsonia.com/images/logo.png", alt: "Hot Sonia — #1 Escort Agency in Patna" }],
   },
 };
 

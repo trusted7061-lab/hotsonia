@@ -7,14 +7,14 @@ export const metadata: Metadata = {
     "Call Girls in Patna — Photos & Gallery | Patna Escorts Photos | Hot Sonia",
   description:
     "Browse real photos of 12 verified call girls in Patna. Patna Escorts gallery — beautiful, verified companions for in-call, out-call & overnight. 100% real photos, no fakes.",
-  alternates: { canonical: "https://www.hotsonia.com/gallery" },
+  alternates: { canonical: "https://hotsonia.com/gallery" },
   openGraph: {
     title: "Call Girls in Patna — Photo Gallery | Patna Escorts | Hot Sonia",
     description:
       "Browse real photos of verified call girls in Patna. 12 stunning Patna Escorts available 24/7. Book your favourite companion today.",
     images: [
       {
-        url: "https://www.hotsonia.com/images/soniya.webp",
+        url: "https://hotsonia.com/images/soniya.webp",
         alt: "Sonia — Call Girl in Patna | Patna Escorts Gallery | Hot Sonia",
       },
     ],
@@ -50,8 +50,8 @@ const imageListSchema = {
       "@type": "ImageObject",
       name: `${c.name} — Call Girl in Patna | Patna Escorts`,
       description: c.desc,
-      contentUrl: `https://www.hotsonia.com${c.img}`,
-      thumbnailUrl: `https://www.hotsonia.com${c.img}`,
+      contentUrl: `https://hotsonia.com${c.img}`,
+      thumbnailUrl: `https://hotsonia.com${c.img}`,
       representativeOfPage: i === 0,
     },
   })),
@@ -61,8 +61,8 @@ const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home — Escorts in Patna", item: "https://www.hotsonia.com" },
-    { "@type": "ListItem", position: 2, name: "Call Girls in Patna — Gallery", item: "https://www.hotsonia.com/gallery" },
+    { "@type": "ListItem", position: 1, name: "Home — Escorts in Patna", item: "https://hotsonia.com" },
+    { "@type": "ListItem", position: 2, name: "Call Girls in Patna — Gallery", item: "https://hotsonia.com/gallery" },
   ],
 };
 

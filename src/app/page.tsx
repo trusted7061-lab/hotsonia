@@ -7,16 +7,16 @@ export const metadata: Metadata = {
     "Escorts in Patna | Call Girls in Patna | #1 Patna Escorts Service — Hot Sonia",
   description:
     "Hot Sonia — Best Escorts in Patna & premium Call Girls in Patna. Patna Escorts Service available 24/7. Verified beautiful companions for in-call, out-call & overnight. Book now.",
-  alternates: { canonical: "https://www.hotsonia.com" },
+  alternates: { canonical: "https://hotsonia.com" },
   openGraph: {
     title:
       "Escorts in Patna | Call Girls in Patna | #1 Patna Escorts Service",
     description:
       "Hot Sonia — Best Escorts in Patna. Premium Call Girls in Patna available 24/7. Book your Patna Escorts Service now.",
-    url: "https://www.hotsonia.com",
+    url: "https://hotsonia.com",
     images: [
       {
-        url: "https://www.hotsonia.com/images/banner.webp",
+        url: "https://hotsonia.com/images/banner.webp",
         alt: "Escorts in Patna — Hot Sonia Patna Escorts Service",
       },
     ],
@@ -134,7 +134,7 @@ const serviceSchema = {
   provider: {
     "@type": "LocalBusiness",
     name: "Hot Sonia",
-    "@id": "https://www.hotsonia.com/#business",
+    "@id": "https://hotsonia.com/#business",
   },
   areaServed: { "@type": "City", name: "Patna" },
   serviceType: "Escort Service",

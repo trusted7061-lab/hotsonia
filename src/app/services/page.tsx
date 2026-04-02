@@ -5,12 +5,12 @@ export const metadata: Metadata = {
   title: "Patna Escorts Service | Call Girls Services & Rates | Hot Sonia Patna",
   description:
     "Hot Sonia offers the best Patna Escorts Service. In-call from Rs.3,000, out-call from Rs.4,000, overnight from Rs.12,000. Premium Call Girls in Patna for every desire. Available 24/7.",
-  alternates: { canonical: "https://www.hotsonia.com/services" },
+  alternates: { canonical: "https://hotsonia.com/services" },
   openGraph: {
     title: "Patna Escorts Service | Rates & Packages | Hot Sonia",
     description:
       "Premium Patna Escorts Service packages. In-call, out-call, overnight & travel companion. Book call girls in Patna today.",
-    images: [{ url: "https://www.hotsonia.com/images/banner.webp", alt: "Patna Escorts Service — Hot Sonia" }],
+    images: [{ url: "https://hotsonia.com/images/banner.webp", alt: "Patna Escorts Service — Hot Sonia" }],
   },
 };
 
@@ -18,8 +18,8 @@ const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home — Escorts in Patna", item: "https://www.hotsonia.com" },
-    { "@type": "ListItem", position: 2, name: "Patna Escorts Service", item: "https://www.hotsonia.com/services" },
+    { "@type": "ListItem", position: 1, name: "Home — Escorts in Patna", item: "https://hotsonia.com" },
+    { "@type": "ListItem", position: 2, name: "Patna Escorts Service", item: "https://hotsonia.com/services" },
   ],
 };
 

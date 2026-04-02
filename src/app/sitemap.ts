@@ -2,7 +2,7 @@ import { MetadataRoute } from "next";
 import { locations } from "@/lib/locations";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const BASE_URL = "https://www.hotsonia.com";
+  const BASE_URL = "https://hotsonia.com";
   const now = new Date().toISOString();
 
   const corePages: MetadataRoute.Sitemap = [
