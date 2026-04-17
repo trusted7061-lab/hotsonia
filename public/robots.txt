@@ -74,3 +74,5 @@ Allow: /
 # ───────────────────────────────────────────────
 
 Sitemap: https://hotsonia.in/sitemap.xml
+LLMs: https://hotsonia.in/llms.txt
+LLMs-Full: https://hotsonia.in/llms-full.txt

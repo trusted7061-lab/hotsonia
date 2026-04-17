@@ -2,15 +2,32 @@ import Link from "next/link";
 import Image from "next/image";
 import type { Metadata } from "next";
 
+const BASE_URL = "https://hotsonia.in";
+
 export const metadata: Metadata = {
   title: "About Hot Sonia | #1 Escort Agency in Patna",
   description:
     "Learn about Hot Sonia — Patna's most trusted escort agency. 5+ years of premium escorts in Patna, 500+ happy clients, 12+ verified call girls in Patna. Discreet, safe, reliable.",
-  alternates: { canonical: "https://hotsonia.in/about" },
+  alternates: {
+    canonical: `${BASE_URL}/about`,
+    languages: { "en-IN": `${BASE_URL}/about`, "x-default": `${BASE_URL}/about` },
+  },
   openGraph: {
+    type: "website",
+    locale: "en_IN",
+    siteName: "Hot Sonia — Escorts in Patna",
+    url: `${BASE_URL}/about`,
     title: "About Hot Sonia | #1 Escort Agency in Patna",
-    description: "5+ years of premium Patna Escorts Service. 500+ happy clients. Verified call girls in Patna.",
-    images: [{ url: "https://hotsonia.in/images/logo.png", alt: "Hot Sonia — #1 Escort Agency in Patna" }],
+    description: "5+ years of premium Patna Escorts Service. 500+ happy clients. 12+ verified call girls in Patna.",
+    images: [{ url: `${BASE_URL}/images/banner.webp`, width: 1200, height: 630, alt: "Hot Sonia — #1 Escort Agency in Patna" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    site: "@hotsonia_in",
+    creator: "@hotsonia_in",
+    title: "About Hot Sonia | #1 Escort Agency in Patna",
+    description: "Patna's most trusted escort agency. 5+ years, 500+ happy clients, 12+ verified companions.",
+    images: [`${BASE_URL}/images/banner.webp`],
   },
 };
 
