@@ -30,7 +30,7 @@ export default function Navbar() {
           <Link href="/">
             <Image
               src="/images/logo.png"
-              alt="Hot Sonia"
+              alt="Hot Sonia — Escorts in Patna"
               width={150}
               height={60}
               className="h-12 w-auto object-contain"

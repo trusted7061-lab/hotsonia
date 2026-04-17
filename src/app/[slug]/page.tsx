@@ -4,7 +4,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { locations, getLocation } from "@/lib/locations";
 
-const BASE_URL = "https://hotsonia.com";
+const BASE_URL = "https://hotsonia.in";
 
 const companions = [
   { name: "Sonia",   img: "/images/soniya.webp",  tag: "⭐ Star Girl" },

@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Playfair_Display, Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
@@ -17,7 +17,7 @@ const inter = Inter({
   display: "swap",
 });
 
-const BASE_URL = "https://hotsonia.com";
+const BASE_URL = "https://hotsonia.in";
 
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
@@ -82,6 +82,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
+    site: "@hotsonia_in",
+    creator: "@hotsonia_in",
     title: "Escorts in Patna | Call Girls in Patna | Hot Sonia Patna",
     description:
       "Premium Escorts in Patna. Verified Call Girls in Patna. Best Patna Escorts Service. 24/7 booking.",
@@ -89,7 +91,23 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: BASE_URL,
+    languages: {
+      "en-IN": BASE_URL,
+      "x-default": BASE_URL,
+    },
   },
+  other: {
+    "geo.region": "IN-BR",
+    "geo.placename": "Patna",
+    "geo.position": "25.5941;85.1376",
+    ICBM: "25.5941, 85.1376",
+  },
+};
+
+export const viewport: Viewport = {
+  themeColor: "#f0187d",
+  width: "device-width",
+  initialScale: 1,
 };
 
 const websiteSchema = {
@@ -188,7 +206,7 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={`${playfair.variable} ${inter.variable}`}>
+    <html lang="en-IN" className={`${playfair.variable} ${inter.variable}`}>
       <body
         className="min-h-screen flex flex-col"
         style={{

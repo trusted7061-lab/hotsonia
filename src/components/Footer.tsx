@@ -59,7 +59,7 @@ export default function Footer() {
             </h3>
             <ul className="space-y-3 text-sm" style={{ color: "rgba(255,255,255,0.5)" }}>
               <li>📍 Patna, Bihar, India</li>
-              <li>📧 contact@hotsonia.com</li>
+              <li>📧 contact@hotsonia.in</li>
               <li>⏰ Available 24 / 7</li>
               <li>🔒 100% Discreet &amp; Safe</li>
             </ul>

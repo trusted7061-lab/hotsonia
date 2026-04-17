@@ -2,24 +2,46 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 
+const BASE_URL = "https://hotsonia.in";
+
 export const metadata: Metadata = {
   title:
     "Escorts in Patna | Call Girls in Patna | Hot Sonia",
   description:
-    "Hot Sonia — #1 Escorts in Patna. Premium Call Girls, verified companions for in-call, out-call & overnight. Available 24/7. Book Now.",
-  alternates: { canonical: "https://hotsonia.com" },
+    "Hot Sonia — #1 Escorts in Patna. Premium verified Call Girls for in-call, out-call & overnight. 12+ real companions. 100% discreet, safe & available 24/7. Book now.",
+  alternates: {
+    canonical: BASE_URL,
+    languages: {
+      "en-IN": BASE_URL,
+      "x-default": BASE_URL,
+    },
+  },
   openGraph: {
+    type: "website",
+    locale: "en_IN",
+    siteName: "Hot Sonia — Escorts in Patna",
     title:
       "Escorts in Patna | Call Girls in Patna | #1 Patna Escorts Service",
     description:
       "Hot Sonia — Best Escorts in Patna. Premium Call Girls in Patna available 24/7. Book your Patna Escorts Service now.",
-    url: "https://hotsonia.com",
+    url: BASE_URL,
     images: [
       {
-        url: "https://hotsonia.com/images/banner.webp",
+        url: `${BASE_URL}/images/banner.webp`,
+        width: 1200,
+        height: 630,
         alt: "Escorts in Patna — Hot Sonia Patna Escorts Service",
       },
     ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    site: "@hotsonia_in",
+    creator: "@hotsonia_in",
+    title: "Escorts in Patna | Call Girls in Patna | Hot Sonia",
+    description:
+      "Hot Sonia — Premium Escorts in Patna. Verified Call Girls 24/7. Book now.",
+    images: [`${BASE_URL}/images/banner.webp`],
   },
 };
 
@@ -134,7 +156,7 @@ const serviceSchema = {
   provider: {
     "@type": "LocalBusiness",
     name: "Hot Sonia",
-    "@id": "https://hotsonia.com/#business",
+    "@id": "https://hotsonia.in/#business",
   },
   areaServed: { "@type": "City", name: "Patna" },
   serviceType: "Escort Service",
@@ -143,6 +165,30 @@ const serviceSchema = {
     { "@type": "Offer", name: "Out-Call Escort Patna", price: "4000", priceCurrency: "INR" },
     { "@type": "Offer", name: "Overnight Escort Patna", price: "12000", priceCurrency: "INR" },
   ],
+};
+
+const webPageSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": `${BASE_URL}/#webpage`,
+  url: BASE_URL,
+  name: "Escorts in Patna | Call Girls in Patna | Hot Sonia",
+  description:
+    "Hot Sonia — #1 Escorts in Patna. Premium verified Call Girls for in-call, out-call & overnight. 100% discreet, available 24/7.",
+  inLanguage: "en-IN",
+  isPartOf: { "@id": `${BASE_URL}/#website` },
+  about: { "@id": `${BASE_URL}/#business` },
+  breadcrumb: {
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Escorts in Patna — Home",
+        item: BASE_URL,
+      },
+    ],
+  },
 };
 
 export default function HomePage() {
@@ -155,6 +201,10 @@ export default function HomePage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
       />
 
       {/* HERO */}
