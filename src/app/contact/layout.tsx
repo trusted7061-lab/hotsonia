@@ -4,6 +4,14 @@ export const metadata: Metadata = {
   title: "Book Escorts in Patna | Contact Hot Sonia",
   description:
     "Book escorts in Patna now. Hot Sonia Patna Escorts Service — fast, 100% discreet booking via call or WhatsApp. Available 24/7.",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+    },
+  },
   alternates: {
     canonical: "https://hotsonia.in/contact",
     languages: { "en-IN": "https://hotsonia.in/contact", "x-default": "https://hotsonia.in/contact" },

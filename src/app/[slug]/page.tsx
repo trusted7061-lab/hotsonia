@@ -75,7 +75,17 @@ export async function generateMetadata({
       description,
       images: [`${BASE_URL}/images/banner.webp`],
     },
-    robots: { index: true, follow: true },
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        "max-image-preview": "large",
+        "max-snippet": -1,
+        "max-video-preview": -1,
+      },
+    },
   };
 }
 

@@ -5,6 +5,14 @@ export const metadata: Metadata = {
   title: "Patna Escorts Service | Packages & Rates — Hot Sonia",
   description:
     "Hot Sonia Patna Escorts Service — in-call from ₹3,000, out-call ₹4,000, overnight ₹12,000. Premium Call Girls in Patna, available 24/7.",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+    },
+  },
   alternates: {
     canonical: "https://hotsonia.in/services",
     languages: { "en-IN": "https://hotsonia.in/services", "x-default": "https://hotsonia.in/services" },

@@ -7,6 +7,14 @@ export const metadata: Metadata = {
     "Call Girls in Patna — Photo Gallery | Hot Sonia",
   description:
     "Browse real photos of 12 verified call girls in Patna. Beautiful Patna Escorts for in-call, out-call & overnight. 100% real, no fakes.",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+    },
+  },
   alternates: {
     canonical: "https://hotsonia.in/gallery",
     languages: { "en-IN": "https://hotsonia.in/gallery", "x-default": "https://hotsonia.in/gallery" },

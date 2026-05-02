@@ -8,6 +8,14 @@ export const metadata: Metadata = {
   title: "About Hot Sonia | #1 Escort Agency in Patna",
   description:
     "Learn about Hot Sonia — Patna's most trusted escort agency. 5+ years of premium escorts in Patna, 500+ happy clients, 12+ verified call girls in Patna. Discreet, safe, reliable.",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+    },
+  },
   alternates: {
     canonical: `${BASE_URL}/about`,
     languages: { "en-IN": `${BASE_URL}/about`, "x-default": `${BASE_URL}/about` },
