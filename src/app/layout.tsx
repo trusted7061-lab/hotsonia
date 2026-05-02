@@ -102,6 +102,9 @@ export const metadata: Metadata = {
     "geo.position": "25.5941;85.1376",
     ICBM: "25.5941, 85.1376",
   },
+  verification: {
+    google: "Mbo2NNk9ddoVLio6lLHX30Pr3sin8uy6kt8Xfe0SXg4",
+  },
 };
 
 export const viewport: Viewport = {
